@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Express Safari Hurghada | Tours & Excursions</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: #fff; color: #1c1c1e; line-height: 1.6; }
+:root {
+  --blue: #0071b2; --blue-h: #005a8e; --green: #25D366;
+  --text: #1c1c1e; --text2: #6b7280; --border: #e5e7eb;
+  --bg: #f9fafb; --warm: #fdf8f3;
+}
+/* NAV */
+header {
+  position: sticky; top: 0; z-index: 100; background: #fff;
+  border-bottom: 1px solid var(--border); padding: 0 6%; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+header img { height: 40px; }
+.hdr-right { display: flex; align-items: center; gap: 12px; }
+.btn-wa-nav {
+  background: var(--green); color: #fff; padding: 9px 18px; border-radius: 8px;
+  font-size: 0.82rem; font-weight: 600; text-decoration: none;
+  display: flex; align-items: center; gap: 6px; white-space: nowrap;
+}
+.phone-link { font-size: 0.82rem; font-weight: 500; color: var(--text); text-decoration: none; white-space: nowrap; }
+@media(max-width:500px){ .phone-link { display:none; } }
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+.hamburger span { display:block; width:22px; height:2px; background:var(--text); border-radius:2px; }
+@media(max-width:768px){ .hamburger { display:flex; } }
+/* MOBILE MENU */
+.mob-menu { display:none; position:fixed; top:64px; left:0; right:0; background:#fff; border-bottom:1px solid var(--border); padding:12px 6%; flex-direction:column; gap:0; z-index:99; box-shadow:0 8px 20px rgba(0,0,0,0.08); }
+.mob-menu.open { display:flex; }
+.mob-menu a { font-size:0.86rem; font-weight:500; color:var(--text); text-decoration:none; padding:10px 0; border-bottom:1px solid var(--border); }
+/* HERO */
+.hero { position:relative; height:88vh; min-height:500px; overflow:hidden; display:flex; align-items:flex-end; }
+.hero > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; }
+.hero-fade { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.22) 50%, rgba(0,0,0,0.04) 100%); }
+.hero-content { position:relative; padding:0 6% 52px; max-width:700px; width:100%; }
+.hero-content h1 { font-family:'Lora',serif; font-size:clamp(2rem,5vw,3.6rem); font-weight:600; color:#fff; line-height:1.15; margin-bottom:12px; }
+.hero-content h1 em { font-style:italic; color:#fde68a; }
+.hero-content p { font-size:0.95rem; color:rgba(255,255,255,0.82); margin-bottom:26px; font-weight:300; max-width:460px; }
+.hero-btns { display:flex; gap:12px; flex-wrap:wrap; }
+.btn-main { background:var(--green); color:#fff; padding:13px 24px; border-radius:8px; font-size:0.88rem; font-weight:600; text-decoration:none; display:flex; align-items:center; gap:7px; }
+.btn-ghost { background:rgba(255,255,255,0.18); backdrop-filter:blur(8px); border:1.5px solid rgba(255,255,255,0.5); color:#fff; padding:13px 24px; border-radius:8px; font-size:0.88rem; font-weight:600; text-decoration:none; }
+/* TRUST */
+.trust-bar { background:var(--bg); border-bottom:1px solid var(--border); padding:13px 6%; display:flex; justify-content:center; gap:32px; flex-wrap:wrap; }
+.trust-item { display:flex; align-items:center; gap:7px; font-size:0.77rem; font-weight:500; color:var(--text2); }
+/* SECTIONS */
+.section { padding:64px 6%; }
+.section.alt { background:var(--warm); }
+.section.grey { background:var(--bg); }
+.sec-label { font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--blue); margin-bottom:7px; }
+.sec-title { font-family:'Lora',serif; font-size:clamp(1.5rem,3vw,2.3rem); font-weight:600; color:var(--text); margin-bottom:7px; line-height:1.25; }
+.sec-title em { font-style:italic; color:var(--blue); }
+.sec-sub { font-size:0.86rem; color:var(--text2); max-width:500px; line-height:1.7; margin-bottom:36px; font-weight:300; }
+/* CARDS */
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:18px; }
+.card { background:#fff; border-radius:14px; overflow:hidden; border:1px solid var(--border); transition:box-shadow .25s, transform .25s; display:flex; flex-direction:column; }
+.card:hover { box-shadow:0 8px 30px rgba(0,0,0,0.11); transform:translateY(-3px); }
+.card-img { height:185px; overflow:hidden; position:relative; flex-shrink:0; }
+.card-img img { width:100%; height:100%; object-fit:cover; transition:transform .4s; }
+.card:hover .card-img img { transform:scale(1.05); }
+.card-tag { position:absolute; top:11px; left:11px; color:#fff; font-size:0.6rem; font-weight:700; padding:4px 9px; border-radius:100px; letter-spacing:0.05em; }
+.t-blue{background:var(--blue);} .t-green{background:#059669;} .t-orange{background:#ea580c;} .t-gold{background:#b45309;} .t-purple{background:#7c3aed;}
+.card-body { padding:16px 15px 14px; display:flex; flex-direction:column; flex:1; }
+.card-title { font-family:'Lora',serif; font-size:1rem; font-weight:600; color:var(--text); margin-bottom:3px; }
+.card-time { font-size:0.72rem; color:var(--text2); margin-bottom:10px; font-weight:400; }
+.inc-list { list-style:none; margin-bottom:12px; flex:1; }
+.inc-list li { font-size:0.74rem; color:var(--text); padding:4px 0; display:flex; align-items:flex-start; gap:7px; line-height:1.4; border-bottom:1px solid #f3f4f6; }
+.inc-list li::before { content:'✓'; color:#16a34a; font-weight:700; font-size:0.64rem; flex-shrink:0; margin-top:2px; }
+.card-footer { display:flex; align-items:center; justify-content:space-between; padding-top:11px; border-top:1px solid var(--border); }
+.card-price { font-family:'Lora',serif; font-size:1.15rem; font-weight:600; color:var(--blue); }
+.card-price span { font-family:'Inter',sans-serif; font-size:0.66rem; color:var(--text2); font-weight:400; margin-left:2px; }
+.card-price.ask { font-family:'Inter',sans-serif; font-size:0.76rem; color:var(--text2); font-weight:400; }
+.card-book { background:var(--green); color:#fff; padding:8px 13px; border-radius:6px; font-size:0.72rem; font-weight:600; text-decoration:none; white-space:nowrap; }
+/* FEATURE */
+.feature { display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:center; }
+@media(max-width:768px){ .feature { grid-template-columns:1fr; gap:26px; } }
+.feature-img { border-radius:14px; overflow:hidden; height:360px; }
+.feature-img img { width:100%; height:100%; object-fit:cover; }
+.checklist { list-style:none; margin:16px 0 24px; }
+.checklist li { display:flex; align-items:flex-start; gap:9px; font-size:0.84rem; color:var(--text); padding:8px 0; border-bottom:1px solid var(--border); line-height:1.5; }
+.checklist li::before { content:'✓'; background:#dcfce7; color:#16a34a; width:18px; height:18px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.62rem; font-weight:700; flex-shrink:0; margin-top:2px; }
+.btn-blue { display:inline-flex; align-items:center; gap:6px; background:var(--blue); color:#fff; padding:11px 20px; border-radius:8px; font-size:0.83rem; font-weight:600; text-decoration:none; }
+/* NILE PRICE BOXES */
+.nile-prices { display:flex; gap:14px; flex-wrap:wrap; margin:20px 0; }
+.nile-box { border-radius:12px; padding:18px 22px; text-align:center; min-width:130px; }
+.nile-box .nb-nights { font-size:0.66rem; font-weight:600; text-transform:uppercase; letter-spacing:0.07em; margin-bottom:5px; }
+.nile-box .nb-price { font-family:'Lora',serif; font-size:1.8rem; font-weight:600; line-height:1; }
+.nile-box .nb-pp { font-size:0.66rem; margin-top:3px; }
+.nile-box.std { background:var(--bg); border:1px solid var(--border); }
+.nile-box.std .nb-nights,.nile-box.std .nb-pp { color:var(--text2); }
+.nile-box.std .nb-price { color:var(--blue); }
+.nile-box.prem { background:var(--blue); }
+.nile-box.prem .nb-nights,.nile-box.prem .nb-pp { color:rgba(255,255,255,0.7); }
+.nile-box.prem .nb-price { color:#fff; }
+/* WHY */
+.why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+@media(max-width:768px){ .why-grid { grid-template-columns:1fr 1fr; } }
+@media(max-width:480px){ .why-grid { grid-template-columns:1fr; } }
+.why-item { padding:20px 17px; border-radius:12px; border:1px solid var(--border); background:#fff; transition:border-color .2s; }
+.why-item:hover { border-color:var(--blue); }
+.why-icon { font-size:1.5rem; margin-bottom:8px; }
+.why-item h4 { font-size:0.87rem; font-weight:600; margin-bottom:4px; }
+.why-item p { font-size:0.75rem; color:var(--text2); line-height:1.6; }
+/* REVIEWS */
+.reviews { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
+@media(max-width:768px){ .reviews { grid-template-columns:1fr; } }
+.review { background:#fff; border:1px solid var(--border); border-radius:12px; padding:18px 16px; }
+.stars { color:#f59e0b; font-size:0.8rem; margin-bottom:8px; letter-spacing:2px; }
+.review-text { font-size:0.81rem; color:var(--text); line-height:1.7; font-style:italic; margin-bottom:12px; }
+.review-author { display:flex; align-items:center; gap:8px; }
+.flag { font-size:1.05rem; }
+.author-name { font-size:0.79rem; font-weight:600; }
+.author-trip { font-size:0.69rem; color:var(--text2); }
+/* CTA */
+.cta-banner { background:var(--blue); color:#fff; padding:52px 6%; text-align:center; }
+.cta-banner h2 { font-family:'Lora',serif; font-size:clamp(1.5rem,3vw,2.1rem); margin-bottom:9px; font-weight:600; }
+.cta-banner p { font-size:0.87rem; opacity:.82; margin-bottom:24px; font-weight:300; }
+.cta-row { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+.btn-wa-cta { background:var(--green); color:#fff; padding:12px 24px; border-radius:8px; font-size:0.87rem; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:7px; }
+.btn-outline-w { border:1.5px solid rgba(255,255,255,0.5); color:#fff; padding:12px 24px; border-radius:8px; font-size:0.87rem; font-weight:600; text-decoration:none; background:rgba(255,255,255,0.08); }
+/* FOOTER */
+footer { background:#111; color:rgba(255,255,255,0.5); padding:42px 6% 24px; }
+.footer-top { display:grid; grid-template-columns:2fr 1fr 1fr; gap:34px; margin-bottom:30px; }
+@media(max-width:700px){ .footer-top { grid-template-columns:1fr 1fr; } }
+.footer-logo img { height:30px; filter:brightness(10); margin-bottom:10px; display:block; }
+.footer-about { font-size:0.75rem; line-height:1.7; max-width:220px; }
+.footer-col h5 { font-size:0.69rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#fff; margin-bottom:11px; }
+.footer-col ul { list-style:none; }
+.footer-col li { margin-bottom:6px; }
+.footer-col a { font-size:0.75rem; color:rgba(255,255,255,0.4); text-decoration:none; transition:color .2s; }
+.footer-col a:hover { color:#fff; }
+.footer-bottom { padding-top:16px; border-top:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; font-size:0.69rem; }
+.socials { display:flex; gap:13px; }
+.socials a { font-size:0.65rem; color:rgba(255,255,255,0.35); text-decoration:none; text-transform:uppercase; letter-spacing:0.05em; transition:color .2s; }
+.socials a:hover { color:#fff; }
+/* FLOAT */
+.wa-float { position:fixed; bottom:20px; right:20px; width:52px; height:52px; background:var(--green); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem; text-decoration:none; box-shadow:0 4px 16px rgba(37,211,102,0.45); z-index:999; animation:pulse 2.5s infinite; }
+@keyframes pulse { 0%,100%{box-shadow:0 4px 16px rgba(37,211,102,0.4);}50%{box-shadow:0 4px 28px rgba(37,211,102,0.65);} }
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/201556477716" target="_blank" class="wa-float">💬</a>
+
+<!-- HEADER -->
+<header>
+  <a href="#" style="text-decoration:none;"><img src="[BASE64_IMAGE]" alt="Express Safari Hurghada"></a>
+  <div class="hdr-right">
+    <a href="tel:+201556477716" class="phone-link">+20 155 647 7716</a>
+    <a href="https://wa.me/201556477716" target="_blank" class="btn-wa-nav">💬 Book Now</a>
+    <button class="hamburger" onclick="document.getElementById('mob').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mob-menu" id="mob">
+  <a href="#sea"     onclick="document.getElementById('mob').classList.remove('open')">🌊 Sea Trips</a>
+  <a href="#desert"  onclick="document.getElementById('mob').classList.remove('open')">🏜️ Desert Safari</a>
+  <a href="#islands" onclick="document.getElementById('mob').classList.remove('open')">🏝️ Islands</a>
+  <a href="#history" onclick="document.getElementById('mob').classList.remove('open')">🏺 Luxor & Cairo</a>
+  <a href="#nile"    onclick="document.getElementById('mob').classList.remove('open')">🚢 Nile Cruise</a>
+  <a href="https://wa.me/201556477716" target="_blank">💬 WhatsApp Us</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="../assets/images/tall_rock.jpg" alt="Hurghada Red Sea">
+  <div class="hero-fade"></div>
+  <div class="hero-content">
+    <h1>Your Hurghada<br><em>Adventure Awaits</em></h1>
+    <p>Dolphins · Coral Reefs · Desert Safari · Ancient Temples — we make every day in Hurghada unforgettable.</p>
+    <div class="hero-btns">
+      <a href="#sea" class="btn-main">🌊 View All Tours</a>
+      <a href="https://wa.me/201556477716" target="_blank" class="btn-ghost">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span>✅</span> Hotel Pickup Included on All Tours</div>
+  <div class="trust-item"><span>🗣️</span> Guide in Your Language</div>
+  <div class="trust-item"><span>⭐</span> 5-Star Rated</div>
+  <div class="trust-item"><span>💬</span> Instant WhatsApp Booking</div>
+  <div class="trust-item"><span>🔒</span> All Trips Can Be Private</div>
+</div>
+
+<!-- ═══ SEA TRIPS ═══ -->
+<section class="section" id="sea">
+  <div class="sec-label">🌊 Water Experiences</div>
+  <h2 class="sec-title">Sea Trips & <em>Water Activities</em></h2>
+  <p class="sec-sub">All trips include hotel pickup & drop-off. We can make any trip private for your group.</p>
+  <div class="cards">
+
+    
+<div class="card">
+  <div class="card-img">
+        <img src="[BASE64_IMAGE]" alt="🐬 Dolphin House" loading="lazy">
+    <span class="card-tag t-blue">⭐ Most Popular</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🐬 Dolphin House</div>
+    <p class="card-time">Daily · 8:30am – 5:00pm</p>
+    <ul class="inc-list"><li>Full day on the boat</li><li>Two snorkeling stops (equipment included)</li><li>Swimming with dolphins in their natural habitat</li><li>Soft drinks & lunch included</li><li>Hotel transfer included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">28€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Dolphin House - 28€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+
+    <div class="card">
+      <div class="card-img">
+        <img src="[BASE64_IMAGE]" alt="🐢 Abu Dabbab" loading="lazy">
+        <span class="card-tag t-green">🐢 Turtles & Dolphins</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">🐢 Abu Dabbab</div>
+        <p class="card-time">Daily · Pickup 4:00am · Returns evening</p>
+        <ul class="inc-list">
+          <li>Full day on the boat</li>
+          <li>Two snorkeling stops (equipment included)</li>
+          <li>Swimming with wild sea turtles in their natural habitat</li>
+          <li>Snorkeling at the famous Abu Dabbab bay</li>
+          <li>Soft drinks &amp; lunch included</li>
+          <li>Hotel transfer included</li>
+        </ul>
+        <div class="card-footer">
+          <div class="card-price">85€ <span>/ person</span></div>
+          <a href="https://wa.me/201556477716?text=Hi! I want to book Abu Dabbab (Swim with Turtles) - 85€ per person" target="_blank" class="card-book">💬 Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🤿 Scuba Diving" loading="lazy">
+    <span class="card-tag t-blue">🤿 PADI Available</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🤿 Scuba Diving</div>
+    <p class="card-time">Daily · 8:30am – 4:00pm</p>
+    <ul class="inc-list"><li>Two different dive spots</li><li>Diving instructor with you</li><li>All diving equipment included</li><li>Lunch & soft drinks on board</li><li>PADI course with license available (3 days)</li></ul>
+    <div class="card-footer">
+      <div class="card-price">38€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Scuba Diving - 38€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🐠 Sharm El Naga" loading="lazy">
+    <span class="card-tag t-green">🪸 Daily</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🐠 Sharm El Naga</div>
+    <p class="card-time">Daily · Pickup 8:00am · Return 8:00pm</p>
+    <ul class="inc-list"><li>Beautiful beach & colorful coral reefs</li><li>Snorkeling equipment included</li><li>Lots of different fish species</li><li>Soft drinks & lunch included</li><li>Entry fee included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">55€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Sharm El Naga - 55€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🚢 Seascope / Glass Boat" loading="lazy">
+    <span class="card-tag t-green">👨‍👩‍👧 Family Friendly</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🚢 Seascope / Glass Boat</div>
+    <p class="card-time">Daily · 10:00am or 2:00pm · 3 hours</p>
+    <ul class="inc-list"><li>Short boat trip on the Red Sea</li><li>See underwater world through the window</li><li>Snorkeling stop (equipment included)</li><li>Soft drinks included</li><li>No swimming needed — perfect for families</li></ul>
+    <div class="card-footer">
+      <div class="card-price">15€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Seascope Glass Boat - 15€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🤿 Submarine" loading="lazy">
+    <span class="card-tag t-purple">🌊 25m Under Surface</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🤿 Submarine</div>
+    <p class="card-time">Daily · 9:00am or 2:00pm</p>
+    <ul class="inc-list"><li>Real submarine 25 meters under the sea</li><li>Explore the underwater world for 2 hours</li><li>Soft drinks included</li><li>No swimming required</li><li>Hotel transfer included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">55€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Submarine - 55€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🐎 Horse Riding" loading="lazy">
+    <span class="card-tag t-orange">🐎 1 or 2 Hours</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🐎 Horse Riding</div>
+    <p class="card-time">Daily · 9:00am – 5:00pm · 1h or 2h</p>
+    <ul class="inc-list"><li>Ride through the desert or along the beach</li><li>1 hour or 2 hours available</li><li>All skill levels welcome</li><li>Hotel transfer included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">28€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Horse Riding - 28€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🎭 Dolphin Show" loading="lazy">
+    <span class="card-tag t-blue">🎭 Show</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🎭 Dolphin Show</div>
+    <p class="card-time">Daily · 9:00am or 1:30pm · 1 hour</p>
+    <ul class="inc-list"><li>Watch the dolphin & walrus show</li><li>Extra: swim in pool with dolphins</li><li>Extra: photos with dolphins</li><li>Hotel transfer included</li><li>Return to hotel after</li></ul>
+    <div class="card-footer">
+      <div class="card-price">27€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Dolphin Show - 27€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🎣 Fishing Trip" loading="lazy">
+    <span class="card-tag t-green">🎣 Daily</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🎣 Fishing Trip</div>
+    <p class="card-time">Daily · 8:30am – 4:30pm</p>
+    <ul class="inc-list"><li>Full day on our boat</li><li>Two different fishing spots</li><li>Fishing equipment included</li><li>Lunch & soft drinks included</li><li>Hotel transfer included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">48€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Fishing Trip - 48€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="⛵ Private Boat Trip" loading="lazy">
+    <span class="card-tag t-blue">⛵ Fully Private</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">⛵ Private Boat Trip</div>
+    <p class="card-time">Available daily — exclusively for your group</p>
+    <ul class="inc-list"><li>Entire boat reserved for your group only</li><li>Snorkeling & swimming stops</li><li>Lunch & soft drinks on board</li><li>Flexible timing & custom route</li><li>Hotel transfer included</li></ul>
+    <div class="card-footer">
+      <div class="card-price ask">Contact us</div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book a Private Boat Trip. Can you send me pricing?" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- ═══ DESERT ═══ -->
+<section class="section alt" id="desert">
+  <div class="sec-label">🏜️ Desert Experiences</div>
+  <h2 class="sec-title">Desert <em>Safari</em></h2>
+  <p class="sec-sub">Choose your adventure — from 3 hours to the full Super Safari. Daily departures, all with hotel pickup.</p>
+
+  <div class="cards">
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🏍️ Quad Safari — 3 Hours" loading="lazy">
+    <span class="card-tag t-orange">3 Hours</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🏍️ Quad Safari — 3 Hours</div>
+    <p class="card-time">Daily · 8:30am or 1:30pm</p>
+    <ul class="inc-list"><li>Own quad bike for everyone</li><li>25km quad safari to Bedouin village</li><li>Camel ride, shisha & tea available</li><li>25km return through the desert</li><li>Hotel transfer included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">23€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Quad Safari 3 hours - 23€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🏍️ Quad Safari — 5 Hours" loading="lazy">
+    <span class="card-tag t-orange">⭐ Most Popular</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🏍️ Quad Safari — 5 Hours</div>
+    <p class="card-time">Daily · 1:30pm – 8:00pm</p>
+    <ul class="inc-list"><li>Own quad bike for everyone</li><li>25km quad safari to Bedouin village</li><li>Camel ride, shisha & tea available</li><li>Sunset watching</li><li>Dinner, dancing show & stars telescope</li><li>Soft drinks & dinner included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">28€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Quad Safari 5 hours - 28€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🚙 Super Safari / Sahara Park" loading="lazy">
+    <span class="card-tag t-purple">🌟 Best Value</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🚙 Super Safari / Sahara Park</div>
+    <p class="card-time">Daily · 1:30pm – 8:00pm · 6.5 hours</p>
+    <ul class="inc-list"><li>Own quad bike (45 min drive)</li><li>Buggy spider car (25 min)</li><li>Jeep to Bedouin village</li><li>Sunset + dinner + dancing show</li><li>Stars through telescope</li><li>Dinner & soft drinks included</li></ul>
+    <div class="card-footer">
+      <div class="card-price ask">Contact us</div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Super Safari / Sahara Park. Please send me the price." target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🚙 Jeep Safari" loading="lazy">
+    <span class="card-tag t-green">🚙 Daily</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🚙 Jeep Safari</div>
+    <p class="card-time">Daily · 1:30pm – 7:30pm</p>
+    <ul class="inc-list"><li>Jeep safari through desert to Bedouin village</li><li>Camel ride available</li><li>Sunset watching</li><li>Dinner & dancing show</li><li>Stars through telescope</li><li>Dinner & soft drinks included</li></ul>
+    <div class="card-footer">
+      <div class="card-price ask">Contact us</div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Jeep Safari. Please send me the price." target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- ═══ ISLANDS ═══ -->
+<section class="section" id="islands">
+  <div class="sec-label">🏝️ Island Trips</div>
+  <h2 class="sec-title">Islands & <em>Beach Trips</em></h2>
+  <p class="sec-sub">Stunning Red Sea islands reachable by boat from Hurghada. All trips depart daily with hotel pickup.</p>
+  <div class="cards">
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🍊 Orange Bay Island" loading="lazy">
+    <span class="card-tag t-orange">🍊 Popular</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🍊 Orange Bay Island</div>
+    <p class="card-time">Daily · 8:00am – 5:00pm</p>
+    <ul class="inc-list"><li>Boat ride to the island</li><li>Two snorkeling stops at coral reefs</li><li>Snorkeling equipment included</li><li>Lunch & soft drinks on board</li><li>Entry for the island included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">31€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Orange Bay Island - 31€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🌺 Hula Hula Beach" loading="lazy">
+    <span class="card-tag t-green">🌺 Beach Bar</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🌺 Hula Hula Beach</div>
+    <p class="card-time">Daily — boat trip included</p>
+    <ul class="inc-list"><li>Tropical bamboo beach bar</li><li>Beach swings & hammocks</li><li>Snorkeling & swimming</li><li>Stunning turquoise water</li><li>Hotel transfer included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">28€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Hula Hula Beach - 28€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🏝️ Paradise Island" loading="lazy">
+    <span class="card-tag t-blue">🏝️ Daily</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🏝️ Paradise Island</div>
+    <p class="card-time">Daily · 8:00am – 5:00pm</p>
+    <ul class="inc-list"><li>Boat ride on our boat</li><li>Two snorkeling stops at coral reefs (equipment included)</li><li>Lunch & soft drinks on board</li><li>Entry for Paradise Island included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">45€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Paradise Island - 45€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+<div class="card fade-in">
+  <div class="card-img">
+    <img src="../assets/images/mahmya.jpg" alt="🏝️ Mahmya Island" loading="lazy">
+    <span class="card-tag t-gold">🏝️ Premium Island</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🏝️ Mahmya Island</div>
+    <p class="card-time">Daily · 8:00am – 5:00pm</p>
+    <ul class="inc-list"><li>Boat ride to Mahmya Island</li><li>Two snorkeling stops at coral reefs (equipment included)</li><li>Lunch & soft drinks on board</li><li>Entry for Mahmya Island included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">100€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Mahmya Island - 100€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🌴 Utopia Island" loading="lazy">
+    <span class="card-tag t-purple">🌴 Caribbean Feel</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🌴 Utopia Island</div>
+    <p class="card-time">Daily · 8:00am – 5:00pm · Safaga</p>
+    <ul class="inc-list"><li>Caribbean feeling in Safaga</li><li>Two snorkeling stops (equipment included)</li><li>Fishing & glass boat included</li><li>Watch dolphins</li><li>Soft drinks & lunch included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">68€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Utopia Island - 68€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- ═══ LUXOR & CAIRO ═══ -->
+<section class="section grey" id="history">
+  <div class="sec-label">🏺 Day Trips from Hurghada</div>
+  <h2 class="sec-title">Luxor, Cairo & <em>Historical Tours</em></h2>
+  <p class="sec-sub">Guide in your language · All entries included · Hotel pickup · We can make all trips private.</p>
+  <div class="cards">
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🏺 Luxor Day Trip" loading="lazy">
+    <span class="card-tag t-gold">🏺 Sun/Tue/Thu</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🏺 Luxor Day Trip</div>
+    <p class="card-time">Sunday, Tuesday, Thursday · Bus 4:30am – 11:30pm</p>
+    <ul class="inc-list"><li>Karnak Temple</li><li>Colossi of Memnon</li><li>Temple of Hatshepsut</li><li>Valley of Kings or Valley of Queens</li><li>Guide in your language</li><li>All entries & lunch included</li></ul>
+    <div class="card-footer">
+      <div class="card-price">65€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Luxor Day Trip - 65€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🏛️ Cairo & Pyramids" loading="lazy">
+    <span class="card-tag t-gold">🏛️ Daily</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🏛️ Cairo & Pyramids</div>
+    <p class="card-time">Daily — transport from Hurghada included</p>
+    <ul class="inc-list"><li>Pyramids of Giza & the Sphinx</li><li>Egyptian Museum</li><li>English-speaking guide</li><li>All entrance fees included</li><li>Hotel pickup & drop-off</li></ul>
+    <div class="card-footer">
+      <div class="card-price">65€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Cairo Day Trip - 65€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+        <img src="[BASE64_IMAGE]" alt="🎈 Luxor Hot Air Balloon" loading="lazy">
+    <span class="card-tag t-orange">🎈 Private Only</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🎈 Luxor Hot Air Balloon</div>
+    <p class="card-time">1 day (private only) or 2-day package</p>
+    <ul class="inc-list"><li>1 Day: pickup midnight → 5am balloon → back by noon</li><li>2 Days: Day 1 = Luxor tour + dinner + hotel</li><li>Day 2: starts 4am → Hot air balloon → back by noon</li><li>Private trip only</li></ul>
+    <div class="card-footer">
+      <div class="card-price ask">Contact us</div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Luxor Hot Air Balloon. Please send me pricing." target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- ═══ NILE CRUISE ═══ -->
+<section class="section" id="nile">
+  <div class="feature">
+    <div class="feature-text">
+      <div class="sec-label">🚢 Multi-Day Experience</div>
+      <h2 class="sec-title">Nile <em>Cruise</em></h2>
+      <p style="font-size:0.87rem;color:var(--text2);line-height:1.75;font-weight:300;margin-bottom:4px;">Sail the legendary Nile River between Luxor and Aswan. Visit ancient temples, villages and timeless landscapes — all meals and a guide included.</p>
+      <ul class="checklist">
+        <li>Sail the Nile between Luxor and Aswan</li>
+        <li>Visit Karnak Temple, Edfu, Kom Ombo & Philae</li>
+        <li>All meals on board included</li>
+        <li>English-speaking guide throughout</li>
+        <li>All entrance fees included</li>
+        <li>Hotel transfer from Hurghada included</li>
+      </ul>
+      <div class="nile-prices">
+        <div class="nile-box std">
+          <div class="nb-nights">3 Nights</div>
+          <div class="nb-price">480€</div>
+          <div class="nb-pp">per person</div>
+        </div>
+        <div class="nile-box prem">
+          <div class="nb-nights">4 Nights</div>
+          <div class="nb-price">580€</div>
+          <div class="nb-pp">per person</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="https://wa.me/201556477716?text=Hi! I want to book the 3 Nights Nile Cruise - 480€ per person" target="_blank" class="btn-blue">💬 Book 3 Nights — 480€</a>
+        <a href="https://wa.me/201556477716?text=Hi! I want to book the 4 Nights Nile Cruise - 580€ per person" target="_blank" class="btn-blue" style="background:#059669;">💬 Book 4 Nights — 580€</a>
+      </div>
+    </div>
+    <div class="feature-img"><img src="[BASE64_IMAGE]" alt="Nile Cruise" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- ═══ EVENING / ENTERTAINMENT ═══ -->
+<section class="section grey">
+  <div class="sec-label">🎭 Evening Entertainment</div>
+  <h2 class="sec-title">Shows & <em>Evening Trips</em></h2>
+  <p class="sec-sub">Make your evenings in Hurghada magical.</p>
+  <div class="cards">
+
+    
+
+</div>
+
+    
+<div class="card">
+  <div class="card-img">
+    <img src="[BASE64_IMAGE]" alt="🌊 Aqua Park" loading="lazy">
+    <span class="card-tag t-blue">🌊 Full Day</span>
+  </div>
+  <div class="card-body">
+    <div class="card-title">🌊 Aqua Park</div>
+    <p class="card-time">Daily · 9:00am – 6:30pm</p>
+    <ul class="inc-list"><li>30-minute transfer included</li><li>50 different water slides</li><li>Lunch & soft drinks included</li><li>Fun for the whole family</li></ul>
+    <div class="card-footer">
+      <div class="card-price">75€<span>/ person</span></div>
+      <a href="https://wa.me/201556477716?text=Hi! I want to book Aqua Park - 75€ per person" target="_blank" class="card-book">💬 Book</a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- ═══ WHY US ═══ -->
+<section class="section" id="why">
+  <div class="sec-label">Why Choose Us</div>
+  <h2 class="sec-title">Your Local <em>Experts in Hurghada</em></h2>
+  <p class="sec-sub">A local team passionate about giving European & American travelers the best Egypt experience.</p>
+  <div class="why-grid">
+    <div class="why-item"><div class="why-icon">💬</div><h4>Book in Minutes</h4><p>Just WhatsApp — we confirm instantly and handle everything.</p></div>
+    <div class="why-item"><div class="why-icon">🚐</div><h4>Hotel Pickup</h4><p>We collect you from your hotel and bring you back. Door to door every time.</p></div>
+    <div class="why-item"><div class="why-icon">🗣️</div><h4>Guide in Your Language</h4><p>English-speaking guides on all tours — friendly and full of local knowledge.</p></div>
+    <div class="why-item"><div class="why-icon">✅</div><h4>All Inclusive</h4><p>Transport, fees, equipment — all included. Zero hidden costs.</p></div>
+    <div class="why-item"><div class="why-icon">🔒</div><h4>Private Available</h4><p>Any trip can be made fully private for your group — just ask.</p></div>
+    <div class="why-item"><div class="why-icon">⭐</div><h4>5-Star Experience</h4><p>Consistently 5-star rated by guests from across Europe and beyond.</p></div>
+  </div>
+</section>
+
+
+<!-- ═══ MEET US / OFFICE ═══ -->
+<section class="section">
+  <div class="sec-label">👋 Meet the Team</div>
+  <h2 class="sec-title">A Real Office, <em>Real People</em></h2>
+  <p class="sec-sub">We are a local team based right here in Hurghada — come visit us on El Mamsha, or just WhatsApp us anytime. Hundreds of happy European guests have booked with us in person.</p>
+    <div class="office-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:18px;max-width:1200px;">
+      <div style="border-radius:14px;overflow:hidden;height:320px;border:1px solid var(--border);">
+        <img src="../assets/images/img_26.jpg" alt="Express Safari office Hurghada" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="border-radius:14px;overflow:hidden;height:320px;border:1px solid var(--border);">
+        <img src="../assets/images/img_27.jpg" alt="Express Safari guests Hurghada" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+      </div>
+      <div style="border-radius:14px;overflow:hidden;height:320px;border:1px solid var(--border);">
+        <img src="../assets/images/img_office_3.jpg" alt="Express Safari team and guests" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:9px;font-size:0.82rem;color:var(--text2);margin-top:20px;margin-bottom:20px;">
+    <span style="font-size:1.2rem;">💬</span>
+    <span>Or book instantly via <a href="https://wa.me/201556477716" target="_blank" style="color:var(--blue);text-decoration:none;font-weight:500;">WhatsApp</a> — we reply in minutes</span>
+  </div>
+    <div class="review"><div class="stars">★★★★★</div><p class="review-text">"Orange Bay was absolutely paradise. The swing in the sea, crystal water, food on the boat — I keep telling everyone about it. Perfect day!"</p><div class="review-author"><div class="flag">🇩🇪</div><div><div class="author-name">Anna K.</div><div class="author-trip">Germany · Orange Bay Island</div></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p class="review-text">"The Luxor day trip completely blew my mind. Valley of the Kings, Karnak Temple — I had no idea Egypt was this extraordinary. Booking via WhatsApp was so easy!"</p><div class="review-author"><div class="flag">🇳🇱</div><div><div class="author-name">Emma V.</div><div class="author-trip">Netherlands · Luxor Day Trip</div></div></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <h2>Ready to Book Your Trip?</h2>
+  <p>WhatsApp us now — we reply within minutes. Hotel pickup included on every single tour.</p>
+  <div class="cta-row">
+    <a href="https://wa.me/201556477716" target="_blank" class="btn-wa-cta">💬 WhatsApp: +20 155 647 7716</a>
+    <a href="tel:+201556477716" class="btn-outline-w">📞 +20 155 647 7716</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo"><img src="[BASE64_IMAGE]" alt="Express Safari"></div>
+      <p class="footer-about">Local tour experts in Hurghada, El Sahl Hasheesh — creating unforgettable Red Sea, desert & Egypt experiences for European & American travelers. All trips include hotel transfer. All trips can be made private.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Sea Trips</h5>
+      <ul>
+        <li><a href="#sea">Dolphin House</a></li>
+        <li><a href="#sea">Scuba Diving</a></li>
+        <li><a href="#sea">Sharm El Naga</a></li>
+        <li><a href="#sea">Seascope / Glass Boat</a></li>
+        <li><a href="#sea">Submarine</a></li>
+        <li><a href="#sea">Horse Riding</a></li>
+        <li><a href="#sea">Dolphin Show</a></li>
+        <li><a href="#sea">Fishing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>More Tours</h5>
+      <ul>
+        <li><a href="#desert">Quad Safari</a></li>
+        <li><a href="#desert">Super Safari</a></li>
+        <li><a href="#desert">Jeep Safari</a></li>
+        <li><a href="#islands">Orange Bay Island</a></li>
+        <li><a href="#islands">Utopia Island</a></li>
+        <li><a href="#history">Luxor Day Trip</a></li>
+        <li><a href="#history">Cairo & Pyramids</a></li>
+        <li><a href="#nile">Nile Cruise</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Express Safari · <a href="https://maps.app.goo.gl/JPR1qwcbUWvwiHmz9" target="_blank" style="color:rgba(255,255,255,0.5);text-decoration:none;">📍 El Mamsha, Hurghada, Red Sea Governorate</a> · +20 155 647 7716 · +20 155 647 7716</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/express.safari/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61580772353044" target="_blank">Facebook</a>
+      <a href="https://www.tiktok.com/@express.safari" target="_blank">TikTok</a>
+      <a href="https://maps.app.goo.gl/JPR1qwcbUWvwiHmz9" target="_blank">Google Maps</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
