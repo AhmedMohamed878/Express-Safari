@@ -1,0 +1,350 @@
+/* ==========================================================================
+   Express Safari — Bootstrap theme
+   Brand colors converted from the original design's oklch palette.
+   ========================================================================== */
+
+:root {
+  --clr-sand: #fbf2e6;
+  --clr-sand-deep: #eedcc0;
+  --clr-clay: #bc6a3d;
+  --clr-clay-dark: #9c5730;
+  --clr-sun: #e3ae4e;
+  --clr-sun-dark: #bd8d3e;
+  --clr-lagoon: #4c9ca0;
+  --clr-lagoon-dark: #3b7c80;
+  --clr-navy: #2e3a56;
+  --clr-brown: #3a2f26;
+  --clr-whatsapp: #25d366;
+  --clr-whatsapp-dark: #1fb959;
+
+  --bs-body-bg: var(--clr-sand);
+  --bs-body-color: var(--clr-brown);
+  --bs-body-font-family: "Nunito", system-ui, -apple-system, sans-serif;
+  --bs-link-color: var(--clr-clay);
+  --bs-link-hover-color: var(--clr-clay-dark);
+}
+
+body {
+  background-color: var(--clr-sand);
+  color: var(--clr-brown);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6, .display-font {
+  font-family: "Baloo 2", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+}
+
+.page-title-stars {
+  display: inline-flex;
+  gap: 0.15em;
+  margin-inline-start: 0.65rem;
+  color: var(--clr-sun);
+  font-size: 0.55em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.sunset-availability {
+  background: linear-gradient(135deg, var(--clr-sand-deep), var(--clr-sand));
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-clay);
+}
+
+/* ---------- Color utilities ---------- */
+.bg-navy { background-color: var(--clr-navy) !important; }
+.bg-clay { background-color: var(--clr-clay) !important; }
+.bg-sun { background-color: var(--clr-sun) !important; }
+.bg-sand { background-color: var(--clr-sand) !important; }
+.bg-sand-deep { background-color: var(--clr-sand-deep) !important; }
+.bg-papyrus { background-color: var(--clr-sand-deep) !important; }
+.bg-whatsapp { background-color: var(--clr-whatsapp) !important; }
+
+.text-clay { color: var(--clr-clay) !important; }
+.text-navy { color: var(--clr-navy) !important; }
+.text-sun { color: var(--clr-sun) !important; }
+.text-sand { color: var(--clr-sand) !important; }
+.text-brown { color: var(--clr-brown) !important; }
+
+a { text-decoration: none; }
+.text-muted-custom { color: #6b5e50; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.btn-clay {
+  background-color: var(--clr-clay);
+  border-color: var(--clr-clay);
+  color: #fff;
+}
+.btn-clay:hover, .btn-clay:focus {
+  background-color: var(--clr-clay-dark);
+  border-color: var(--clr-clay-dark);
+  color: #fff;
+}
+.btn-whatsapp {
+  background-color: var(--clr-whatsapp);
+  border-color: var(--clr-whatsapp);
+  color: #fff;
+}
+.btn-whatsapp:hover, .btn-whatsapp:focus {
+  background-color: var(--clr-whatsapp-dark);
+  border-color: var(--clr-whatsapp-dark);
+  color: #fff;
+}
+.btn-outline-navy {
+  border: 2px solid var(--clr-navy);
+  color: var(--clr-navy);
+  background: transparent;
+}
+.btn-outline-navy:hover {
+  background-color: var(--clr-navy);
+  color: var(--clr-sand);
+}
+.btn-outline-sand {
+  border: 2px solid var(--clr-sand);
+  color: var(--clr-sand);
+  background: transparent;
+}
+.btn-outline-sand:hover {
+  background-color: var(--clr-sand);
+  color: var(--clr-navy);
+}
+.btn-outline-white {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+.btn-outline-white:hover {
+  background-color: #fff;
+  color: var(--clr-clay);
+}
+.btn-uppercase {
+  text-transform: uppercase;
+}
+
+/* Category / price filter pill buttons */
+.btn-filter {
+  border: 1px solid #e4d6c2;
+  background-color: #fff;
+  color: var(--clr-brown);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.btn-filter:hover { background-color: var(--clr-sand-deep); }
+.btn-filter.active {
+  background-color: var(--clr-clay);
+  border-color: var(--clr-clay);
+  color: #fff;
+}
+.btn-filter.active.filter-fullday {
+  background-color: var(--clr-navy);
+  border-color: var(--clr-navy);
+}
+
+/* ---------- Navbar ---------- */
+.site-navbar {
+  background-color: rgba(251, 242, 230, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #ecdcc4;
+}
+.site-navbar .nav-link {
+  font-weight: 700;
+  color: rgba(58, 47, 38, 0.85);
+  border-radius: 999px;
+  padding: 0.5rem 1rem !important;
+}
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link.active {
+  background-color: var(--clr-sand-deep);
+  color: var(--clr-brown);
+}
+.navbar-brand img { height: 40px; width: auto; }
+
+/* ---------- Cards ---------- */
+.rounded-4xl { border-radius: 1.5rem !important; }
+.tour-card {
+  border: 1px solid #ecdcc4;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.2s ease;
+}
+.tour-card:hover { box-shadow: 0 0.75rem 1.5rem rgba(46, 58, 86, 0.12); }
+.tour-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+.tour-card:hover img { transform: scale(1.05); }
+.tour-card .card-title a { color: var(--clr-navy); }
+.tour-card .card-title a:hover { color: var(--clr-clay); }
+
+.card-time {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--clr-clay);
+  margin-bottom: 0.35rem;
+}
+.inc-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.825rem;
+  color: #6b5e50;
+}
+.inc-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.35;
+}
+.inc-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--clr-clay);
+  font-weight: 700;
+}
+
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 1rem;
+  background-color: rgba(188, 106, 61, 0.1);
+  color: var(--clr-clay);
+}
+
+/* ---------- Hero ---------- */
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(420px, 60vh, 720px);
+}
+.hero-section .container-xl {
+  position: relative;
+  z-index: 1;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.hero-section img.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.hero-section .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(46,58,86,0.78), rgba(46,58,86,0.55) 45%, rgba(46,58,86,0.82));
+}
+.hero-navy-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgba(46, 58, 86, 0.7);
+}
+.trust-pill {
+  background-color: rgba(251, 242, 230, 0.12);
+  border-radius: 1rem;
+  padding: 0.75rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  backdrop-filter: blur(2px);
+}
+
+/* ---------- Footer ---------- */
+.site-footer { background-color: var(--clr-navy); color: var(--clr-sand); }
+.site-footer a { color: rgba(251,242,230,0.8); }
+.site-footer a:hover { color: var(--clr-sun); }
+.site-footer .social-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(251,242,230,0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-sand);
+}
+.site-footer .social-btn:hover { background-color: rgba(251,242,230,0.2); }
+
+/* ---------- WhatsApp float button ---------- */
+.wa-float {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1040;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-whatsapp);
+  color: #fff;
+  font-size: 1.5rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,0.25);
+  transition: transform 0.2s ease;
+}
+.wa-float:hover { transform: scale(1.06); color: #fff; }
+.wa-float.wa-float-raised { bottom: 6rem; }
+@media (max-width: 575.98px) {
+  .has-mobile-book-bar .wa-float { display: none; }
+}
+@media (min-width: 576px) {
+  .wa-float.wa-float-raised { bottom: 1rem; }
+}
+
+/* ---------- Mobile sticky book bar (tour detail page) ---------- */
+.mobile-book-bar {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 1030;
+  background: #fff;
+  border-top: 1px solid #ecdcc4;
+  padding: 0.75rem;
+}
+@media (min-width: 576px) {
+  .mobile-book-bar { display: none; }
+}
+
+/* ---------- Misc ---------- */
+.section-py { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+@media (max-width: 575px) {
+  .section-py {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.aspect-4-3 { aspect-ratio: 4/3; object-fit: cover; }
+.aspect-4-5 { aspect-ratio: 4/5; object-fit: cover; }

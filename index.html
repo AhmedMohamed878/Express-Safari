@@ -4,882 +4,1157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Express Safari Hurghada | Tours & Excursions</title>
+  <title>Express Safari — Hurghada Tours, Sea Trips &amp; Desert Safari</title>
+  <meta name="description"
+    content="Book Hurghada excursions with a local team: Orange Bay, Dolphin House, quad safari, Cairo and Luxor day trips. Clear prices, hotel pickup, easy WhatsApp booking.">
+  <meta property="og:title" content="Express Safari — Hurghada Tours, Sea Trips &amp; Desert Safari">
+  <meta property="og:description"
+    content="Book Hurghada excursions with a local team: Orange Bay, Dolphin House, quad safari, Cairo and Luxor day trips. Clear prices, hotel pickup, easy WhatsApp booking.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/images/logo.png" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 
-<body>
-
-  <a href="https://wa.me/201556477716" target="_blank" class="wa-float">💬</a>
-
-  <!-- HEADER -->
-  <header>
-    <a href="#" style="text-decoration:none;"><img src="assets/images/img_1.jpg" alt="Express Safari Hurghada"></a>
-    <div class="hdr-right">
-      <a href="tel:+201556477716" class="phone-link">+20 155 647 7716</a>
-      <a href="https://wa.me/201556477716" target="_blank" class="btn-wa-nav">💬 Book Now</a>
-      <button class="hamburger">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+<body class="d-flex flex-column min-vh-100">
+  <header class="sticky-top site-navbar">
+    <nav class="navbar navbar-expand-lg py-2">
+      <div class="container-xl">
+        <a class="navbar-brand" href="index.html" aria-label="Express Safari Hurghada — home">
+          <img src="assets/images/logoL.png" alt="Express Safari Hurghada logo">
+        </a>
+        <div class="d-flex align-items-center order-lg-3 gap-2">
+          <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20ask%20about%20your%20tours."
+            target="_blank" rel="noopener noreferrer"
+            class="btn btn-whatsapp rounded-pill btn-sm d-none d-sm-inline-flex align-items-center gap-2 px-3 py-2">
+            <i class="bi bi-whatsapp"></i> WhatsApp Us
+          </a>
+          <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20ask%20about%20your%20tours."
+            target="_blank" rel="noopener noreferrer"
+            class="btn btn-whatsapp rounded-circle d-inline-flex d-sm-none align-items-center justify-content-center"
+            style="width:2.75rem;height:2.75rem;" aria-label="WhatsApp Us">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-3"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="mainNav">
+          <ul class="navbar-nav mx-lg-auto gap-lg-1 mt-3 mt-lg-0">
+            <!-- <li class="nav-item"><a class="nav-link" href="tours/sea.html">Tours</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="tours/sea.html">Sea & Islands</a></li>
+            <li class="nav-item"><a class="nav-link" href="tours/safari.html">Safari</a></li>
+            <li class="nav-item"><a class="nav-link" href="tours/sightseeing.html">Sightseeing</a></li>
+            <li class="nav-item"><a class="nav-link" href="tours/entertainment.html">Entertainment</a></li>
+            <li class="nav-item"><a class="nav-link" href="tours/private.html">Private Trips</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
-  <div class="mob-menu" id="mob">
-    <a href="#sea">🌊 Sea Trips</a>
-    <a href="#desert">🏜️ Desert Safari</a>
-    <a href="#islands">🏝️ Islands</a>
-    <a href="#history">🏺 Luxor & Cairo</a>
-    <a href="#nile">🚢 Nile Cruise</a>
-    <a href="https://wa.me/201556477716" target="_blank">💬 WhatsApp Us</a>
-  </div>
+  <main class="flex-grow-1">
 
-  <!-- HERO -->
-  <div class="hero">
-    <img src="assets/k.jpeg" alt="Hurghada Red Sea">
-    <div class="hero-fade"></div>
-    <div class="hero-content">
-      <h1>Your Hurghada<br><em>Adventure Awaits</em></h1>
-      <p>Dolphins · Coral Reefs · Desert Safari · Ancient Temples — we make every day in Hurghada unforgettable.</p>
-      <div class="hero-btns">
-        <a href="#sea" class="btn-main">🌊 View All Tours</a>
-        <a href="https://wa.me/201556477716" target="_blank" class="btn-ghost">💬 WhatsApp Us</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="trust-item"><span>✅</span> Hotel Pickup Included on All Tours</div>
-    <div class="trust-item"><span>🗣️</span> Guide in Your Language</div>
-    <div class="trust-item"><span>⭐</span> 5-Star Rated</div>
-    <div class="trust-item"><span>💬</span> Instant WhatsApp Booking</div>
-    <div class="trust-item"><span>🔒</span> All Trips Can Be Private</div>
-  </div>
-
-  <!-- ═══ SEA TRIPS ═══ -->
-  <section class="section fade-in" id="sea">
-    <div class="sec-label">🌊 Water Experiences</div>
-    <h2 class="sec-title">Sea Trips & <em>Water Activities</em></h2>
-    <p class="sec-sub">All trips include hotel pickup & drop-off. We can make any trip private for your group.</p>
-    <div class="cards">
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_3.jpg" alt="🐬 Dolphin House" loading="lazy">
-          <span class="card-tag t-blue">⭐ Most Popular</span>
+    <!-- HERO -->
+    <section class="hero-section">
+      <img class="hero-bg" src="assets/sea&islands/img_11.jpg"
+        alt="Express Safari Hurghada — Sea Trips, Desert Safari & Sightseeing" loading="lazy">
+      <div class="hero-overlay"></div>
+      <div class="container-xl text-sand py-5 py-sm-6" style="padding-top:5rem;padding-bottom:5rem;">
+        <p class="eyebrow text-sun mb-2">Sea Trips &bull; Islands &bull; Safari &bull; Sightseeing</p>
+        <h1 class=" display-font text-uppercase display-4 display-sm-2 mb-3" style="line-height:1.05;">Your
+          adventure<br>starts here</h1>
+        <p class="fs-5 mb-4" style="max-width:34rem; color:rgba(251,242,230,0.9);">Discover Hurghada and Egypt with a
+          local team you can trust.</p>
+        <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+          <a href="tours/sea.html" class="btn btn-clay btn-uppercase rounded-pill px-4 py-3 fs-6 shadow">Explore
+            Tours</a>
+          <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20ask%20about%20your%20tours."
+            target="_blank" rel="noopener noreferrer"
+            class="btn btn-whatsapp btn-uppercase rounded-pill px-4 py-3 fs-6 shadow d-inline-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-whatsapp"></i> Book on WhatsApp
+          </a>
         </div>
-        <div class="card-body">
-          <div class="card-title">🐬 Dolphin House</div>
-          <p class="card-time">Daily · 8:30am – 5:00pm</p>
-          <ul class="inc-list">
-            <li>Full day on the boat</li>
-            <li>Two snorkeling stops (equipment included)</li>
-            <li>Swimming with dolphins in their natural habitat</li>
-            <li>Soft drinks & lunch included</li>
-            <li>Hotel transfer included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">28€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Dolphin House - 28€ per person" target="_blank"
-              class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_4.jpg" alt="🐢 Abu Dabbab" loading="lazy">
-          <span class="card-tag t-green">🐢 Turtles & Dolphins</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🐢 Abu Dabbab</div>
-          <p class="card-time">Daily · Pickup 4:00am · Returns evening</p>
-          <ul class="inc-list">
-            <li>Full day on the boat</li>
-            <li>Two snorkeling stops (equipment included)</li>
-            <li>Swimming with wild sea turtles in their natural habitat</li>
-            <li>Snorkeling at the famous Abu Dabbab bay</li>
-            <li>Soft drinks &amp; lunch included</li>
-            <li>Hotel transfer included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">85€ <span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Abu Dabbab (Swim with Turtles) - 85€ per person"
-              target="_blank" class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_5.jpg" alt="🤿 Scuba Diving" loading="lazy">
-          <span class="card-tag t-blue">🤿 PADI Available</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🤿 Scuba Diving</div>
-          <p class="card-time">Daily · 8:30am – 4:00pm</p>
-          <ul class="inc-list">
-            <li>Two different dive spots</li>
-            <li>Diving instructor with you</li>
-            <li>All diving equipment included</li>
-            <li>Lunch & soft drinks on board</li>
-            <li>PADI course with license available (3 days)</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">38€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Scuba Diving - 38€ per person" target="_blank"
-              class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_6.jpg" alt="🐠 Sharm El Naga" loading="lazy">
-          <span class="card-tag t-green">🪸 Daily</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🐠 Sharm El Naga</div>
-          <p class="card-time">Daily · Pickup 8:00am · Return 8:00pm</p>
-          <ul class="inc-list">
-            <li>Beautiful beach & colorful coral reefs</li>
-            <li>Snorkeling equipment included</li>
-            <li>Lots of different fish species</li>
-            <li>Soft drinks & lunch included</li>
-            <li>Entry fee included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">55€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Sharm El Naga - 55€ per person" target="_blank"
-              class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_7.jpg" alt="🚢 Seascope / Glass Boat" loading="lazy">
-          <span class="card-tag t-green">👨‍👩‍👧 Family Friendly</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🚢 Seascope / Glass Boat</div>
-          <p class="card-time">Daily · 10:00am or 2:00pm · 3 hours</p>
-          <ul class="inc-list">
-            <li>Short boat trip on the Red Sea</li>
-            <li>See underwater world through the window</li>
-            <li>Snorkeling stop (equipment included)</li>
-            <li>Soft drinks included</li>
-            <li>No swimming needed — perfect for families</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">15€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Seascope Glass Boat - 15€ per person"
-              target="_blank" class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_10.jpg" alt="🎭 Dolphin Show" loading="lazy">
-          <span class="card-tag t-blue">🎭 Show</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🎭 Dolphin Show</div>
-          <p class="card-time">Daily · 9:00am or 1:30pm · 1 hour</p>
-          <ul class="inc-list">
-            <li>Watch the dolphin & walrus show</li>
-            <li>Extra: swim in pool with dolphins</li>
-            <li>Extra: photos with dolphins</li>
-            <li>Hotel transfer included</li>
-            <li>Return to hotel after</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">27€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Dolphin Show - 27€ per person" target="_blank"
-              class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_11.jpg" alt="🎣 Fishing Trip" loading="lazy">
-          <span class="card-tag t-green">🎣 Daily</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🎣 Fishing Trip</div>
-          <p class="card-time">Daily · 8:30am – 4:30pm</p>
-          <ul class="inc-list">
-            <li>Full day on our boat</li>
-            <li>Two different fishing spots</li>
-            <li>Fishing equipment included</li>
-            <li>Lunch & soft drinks included</li>
-            <li>Hotel transfer included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">48€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Fishing Trip - 48€ per person" target="_blank"
-              class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_12.jpg" alt="⛵ Private Boat Trip" loading="lazy">
-          <span class="card-tag t-blue">⛵ Fully Private</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">⛵ Private Boat Trip</div>
-          <p class="card-time">Available daily — exclusively for your group</p>
-          <ul class="inc-list">
-            <li>Entire boat reserved for your group only</li>
-            <li>Snorkeling & swimming stops</li>
-            <li>Lunch & soft drinks on board</li>
-            <li>Flexible timing & custom route</li>
-            <li>Hotel transfer included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price ask">Contact us</div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book a Private Boat Trip. Can you send me pricing?"
-              target="_blank" class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_9.jpg" alt="🐎 Horse Riding" loading="lazy">
-          <span class="card-tag t-orange">🐎 1 or 2 Hours</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🐎 Horse Riding</div>
-          <p class="card-time">Daily · 9:00am – 5:00pm · 1h or 2h</p>
-          <ul class="inc-list">
-            <li>Ride through the desert or along the beach</li>
-            <li>1 hour or 2 hours available</li>
-            <li>All skill levels welcome</li>
-            <li>Hotel transfer included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">28€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Horse Riding - 28€ per person" target="_blank"
-              class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_25.jpg" alt="🌊 Aqua Park" loading="lazy">
-          <span class="card-tag t-blue">🌊 Full Day</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🌊 Aqua Park</div>
-          <p class="card-time">Daily · 9:00am – 6:30pm</p>
-          <ul class="inc-list">
-            <li>30-minute transfer included</li>
-            <li>50 different water slides</li>
-            <li>Lunch & soft drinks included</li>
-            <li>Fun for the whole family</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">75€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Aqua Park - 75€ per person" target="_blank"
-              class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══ ISLANDS ═══ -->
-  <section class="section fade-in" id="islands">
-    <div class="sec-label">🏝️ Island Trips</div>
-    <h2 class="sec-title">Islands & <em>Beach Trips</em></h2>
-    <p class="sec-sub">Stunning Red Sea islands reachable by boat from Hurghada. All trips depart daily with hotel
-      pickup.</p>
-    <div class="cards">
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/b1.jpg" alt="🍊 Orange Bay Island" loading="lazy">
-          <span class="card-tag t-orange">🍊 Popular</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🍊 Orange Bay Island</div>
-          <p class="card-time">Daily · 8:00am – 5:00pm</p>
-          <ul class="inc-list">
-            <li>Boat ride to the island</li>
-            <li>Two snorkeling stops at coral reefs</li>
-            <li>Snorkeling equipment included</li>
-            <li>Lunch & soft drinks on board</li>
-            <li>Entry for the island included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">31€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Orange Bay Island - 31€ per person"
-              target="_blank" class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/WhatsApp Image 2026-07-13 at 6.14.30 PM.jpeg" alt="🌺 Hula Hula Beach" loading="lazy">
-          <span class="card-tag t-green">🌺 Beach Bar</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🌺 Hula Hula Beach</div>
-          <p class="card-time">Daily — boat trip included</p>
-          <ul class="inc-list">
-            <li>Tropical bamboo beach bar</li>
-            <li>Beach swings & hammocks</li>
-            <li>Snorkeling & swimming</li>
-            <li>Stunning turquoise water</li>
-            <li>Hotel transfer included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">28€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Hula Hula Beach - 28€ per person"
-              target="_blank" class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/the-perfect-destination.jpg" alt="🏝️ Paradise Island" loading="lazy">
-          <span class="card-tag t-blue">🏝️ Daily</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🏝️ Paradise Island</div>
-          <p class="card-time">Daily · 8:00am – 5:00pm</p>
-          <ul class="inc-list">
-            <li>Boat ride on our boat</li>
-            <li>Two snorkeling stops at coral reefs (equipment included)</li>
-            <li>Lunch & soft drinks on board</li>
-            <li>Entry for Paradise Island included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">45€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Paradise Island - 45€ per person"
-              target="_blank" class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/mahmya.jpg" alt="🏝️ Mahmya Island" loading="lazy">
-          <span class="card-tag t-gold">🏝️ Premium Island</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🏝️ Mahmya Island</div>
-          <p class="card-time">Daily · 8:00am – 5:00pm</p>
-          <ul class="inc-list">
-            <li>Boat ride to Mahmya Island</li>
-            <li>Two snorkeling stops at coral reefs (equipment included)</li>
-            <li>Lunch & soft drinks on board</li>
-            <li>Entry for Mahmya Island included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">95€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Mahmya Island - 100€ per person" target="_blank"
-              class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/ae.jpg" alt="🌴 Bianca Island" loading="lazy">
-          <span class="card-tag t-purple">🌴 Caribbean Feel</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🌴 Bianca Island</div>
-          <p class="card-time">Daily · 8:00am – 5:00pm </p>
-          <ul class="inc-list">
-            <li>Caribbean feeling in Safaga</li>
-            <li>Two snorkeling stops (equipment included)</li>
-            <li>Water sports &glass boat included</li>
-            <li>Watch dolphins</li>
-            <li>Soft drinks & lunch included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">75€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Bianca Island - 68€ per person" target="_blank"
-              class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══ DESERT ═══ -->
-  <section class="section fade-in alt" id="desert">
-    <div class="sec-label">🏜️ Desert Experiences</div>
-    <h2 class="sec-title">Desert <em>Safari</em></h2>
-    <p class="sec-sub">Choose your adventure — from 3 hours to the full Super Safari. Daily departures, all with hotel
-      pickup.</p>
-
-    <div class="cards">
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/l.jpeg" alt="Secret Village Safari" loading="lazy">
-          <span class="card-tag t-gold">🌟 Special</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🏜️ Secret Village Safari</div>
-          <p class="card-time">Price on request · Special private experience</p>
-          <ul class="inc-list">
-            <li>Quad ride through the desert</li>
-            <li>Bedouin village visit</li>
-            <li>Journey to a hidden abandoned village in the mountains</li>
-            <li>Natural water spring — unique experience found nowhere else in Hurghada 💧</li>
-            <li>Traditional evening party &amp; dinner 🎉</li>
-            <li>Hotel transfer included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price ask">Price on request</div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Secret Village Safari. Please send me the price."
-              target="_blank" class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/WhatsApp Image 2026-07-13 at 6.30.57 PM.jpeg" alt="🏍️ Quad Safari — 3 Hours" loading="lazy">
-          <span class="card-tag t-orange">3 Hours</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🏍️ Quad Safari — 3 Hours</div>
-          <p class="card-time">Daily · 8:30am or 1:30pm</p>
-          <ul class="inc-list">
-            <li>Own quad bike for everyone</li>
-            <li>25km quad safari to Bedouin village</li>
-            <li>Camel ride, shisha & tea available</li>
-            <li>25km return through the desert</li>
-            <li>Hotel transfer included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">23€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Quad Safari 3 hours - 23€ per person"
-              target="_blank" class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_13.jpg" alt="🏍️ Quad Safari — 5 Hours" loading="lazy">
-          <span class="card-tag t-orange">⭐ Most Popular</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🏍️ Quad Safari — 5 Hours</div>
-          <p class="card-time">Daily · 1:30pm – 8:00pm</p>
-          <ul class="inc-list">
-            <li>Own quad bike for everyone</li>
-            <li>25km quad safari to Bedouin village</li>
-            <li>Camel ride, shisha & tea available</li>
-            <li>Sunset watching</li>
-            <li>Dinner, dancing show & stars telescope</li>
-            <li>Soft drinks & dinner included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">28€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Quad Safari 5 hours - 28€ per person"
-              target="_blank" class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_16.jpg" alt="🚙 Super Safari / Sahara Park" loading="lazy">
-          <span class="card-tag t-purple">🌟 Best Value</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🚙 Super Safari / Sahara Park</div>
-          <p class="card-time">Daily · 1:30pm – 8:00pm · 6.5 hours</p>
-          <ul class="inc-list">
-            <li>Own quad bike (45 min drive)</li>
-            <li>Buggy spider car (25 min)</li>
-            <li>Jeep to Bedouin village</li>
-            <li>Sunset + dinner + dancing show</li>
-            <li>Stars through telescope</li>
-            <li>Dinner & soft drinks included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price ask">Contact us</div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Super Safari / Sahara Park. Please send me the price."
-              target="_blank" class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_15.jpg" alt="🚙 Jeep Safari" loading="lazy">
-          <span class="card-tag t-green">🚙 Daily</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🚙 Jeep Safari</div>
-          <p class="card-time">Daily · 1:30pm – 7:30pm</p>
-          <ul class="inc-list">
-            <li>Jeep safari through desert to Bedouin village</li>
-            <li>Camel ride available</li>
-            <li>Sunset watching</li>
-            <li>Dinner & dancing show</li>
-            <li>Stars through telescope</li>
-            <li>Dinner & soft drinks included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price ask">Contact us</div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Jeep Safari. Please send me the price."
-              target="_blank" class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══ LUXOR & CAIRO ═══ -->
-  <section class="section fade-in grey" id="history">
-    <div class="sec-label">🏺 Day Trips from Hurghada</div>
-    <h2 class="sec-title">Luxor, Cairo & <em>Historical Tours</em></h2>
-    <p class="sec-sub">Guide in your language · All entries included · Hotel pickup · We can make all trips private.</p>
-    <div class="cards">
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_21.jpg" alt="🏺 Luxor Day Trip" loading="lazy">
-          <span class="card-tag t-gold">🏺 Sun/Tue/Thu</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🏺 Luxor Day Trip</div>
-          <p class="card-time">Sunday, Tuesday, Thursday · Bus 4:30am – 11:30pm</p>
-          <ul class="inc-list">
-            <li>Karnak Temple</li>
-            <li>Colossi of Memnon</li>
-            <li>Temple of Hatshepsut</li>
-            <li>Valley of Kings or Valley of Queens</li>
-            <li>Guide in your language</li>
-            <li>All entries & lunch included</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">65€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Luxor Day Trip - 65€ per person" target="_blank"
-              class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_22.jpg" alt="🏛️ Cairo & Pyramids" loading="lazy">
-          <span class="card-tag t-gold">🏛️ Daily</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🏛️ Cairo & Pyramids</div>
-          <p class="card-time">Daily — transport from Hurghada included</p>
-          <ul class="inc-list">
-            <li>Pyramids of Giza & the Sphinx</li>
-            <li>Egyptian Museum</li>
-            <li>English-speaking guide</li>
-            <li>All entrance fees included</li>
-            <li>Hotel pickup & drop-off</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price">65€<span>/ person</span></div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Cairo Day Trip - 65€ per person" target="_blank"
-              class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card fade-in">
-        <div class="card-img">
-          <img src="assets/images/img_23.jpg" alt="🎈 Luxor Hot Air Balloon" loading="lazy">
-          <span class="card-tag t-orange">🎈 Private Only</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title">🎈 Luxor Hot Air Balloon</div>
-          <p class="card-time">1 day (private only) or 2-day package</p>
-          <ul class="inc-list">
-            <li>1 Day: pickup midnight → 5am balloon → back by noon</li>
-            <li>2 Days: Day 1 = Luxor tour + dinner + hotel</li>
-            <li>Day 2: starts 4am → Hot air balloon → back by noon</li>
-            <li>Private trip only</li>
-          </ul>
-          <div class="card-footer">
-            <div class="card-price ask">Contact us</div>
-            <a href="https://wa.me/201556477716?text=Hi! I want to book Luxor Hot Air Balloon. Please send me pricing."
-              target="_blank" class="card-book">💬 Book</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══ NILE CRUISE ═══ -->
-  <section class="section fade-in" id="nile">
-    <div class="feature">
-      <div class="feature-text">
-        <div class="sec-label">🚢 Multi-Day Experience</div>
-        <h2 class="sec-title">Nile <em>Cruise</em></h2>
-        <p style="font-size:0.87rem;color:var(--text2);line-height:1.75;font-weight:300;margin-bottom:4px;">Sail the
-          legendary Nile River between Luxor and Aswan. Visit ancient temples, villages and timeless landscapes — all
-          meals and a guide included.</p>
-        <ul class="checklist">
-          <li>Sail the Nile between Luxor and Aswan</li>
-          <li>Visit Karnak Temple, Edfu, Kom Ombo & Philae</li>
-          <li>All meals on board included</li>
-          <li>English-speaking guide throughout</li>
-          <li>All entrance fees included</li>
-          <li>Hotel transfer from Hurghada included</li>
-        </ul>
-        <div class="nile-prices">
-          <div class="nile-box std">
-            <div class="nb-nights">3 Nights</div>
-            <div class="nb-price">480€</div>
-            <div class="nb-pp">per person</div>
-          </div>
-          <div class="nile-box prem">
-            <div class="nb-nights">4 Nights</div>
-            <div class="nb-price">580€</div>
-            <div class="nb-pp">per person</div>
-          </div>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a href="https://wa.me/201556477716?text=Hi! I want to book the 3 Nights Nile Cruise - 480€ per person"
-            target="_blank" class="btn-blue">💬 Book 3 Nights — 480€</a>
-          <a href="https://wa.me/201556477716?text=Hi! I want to book the 4 Nights Nile Cruise - 580€ per person"
-            target="_blank" class="btn-blue" style="background:#059669;">💬 Book 4 Nights — 580€</a>
-        </div>
-      </div>
-      <div class="feature-img"><img src="assets/images/img_24.jpg" alt="Nile Cruise" loading="lazy"></div>
-    </div>
-  </section>
-
-
-
-  <!-- ═══ WHY US ═══ -->
-  <section class="section fade-in" id="why">
-    <div class="sec-label">Why Choose Us</div>
-    <h2 class="sec-title">Your Local <em>Experts in Hurghada</em></h2>
-    <p class="sec-sub">A Local experts delivering unforgettable experiences for travelers across Egypt.</p>
-    <div class="why-grid">
-      <div class="why-item">
-        <div class="why-icon">💬</div>
-        <h4>Book in Minutes</h4>
-        <p>Just WhatsApp — we confirm instantly and handle everything.</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">🚐</div>
-        <h4>Hotel Pickup</h4>
-        <p>We collect you from your hotel and bring you back. Door to door every time.</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">🗣️</div>
-        <h4>Guide in Your Language</h4>
-        <p>English-speaking guides on all tours — friendly and full of local knowledge.</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">✅</div>
-        <h4>All Inclusive</h4>
-        <p>Transport, fees, equipment — all included. Zero hidden costs.</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">🔒</div>
-        <h4>Private Available</h4>
-        <p>Any trip can be made fully private for your group — just ask.</p>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">⭐</div>
-        <h4>5-Star Experience</h4>
-        <p>Consistently 5-star rated by guests from across Europe and beyond.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══ MEET US / OFFICE ═══ -->
-  <section class="section fade-in">
-    <div class="sec-label">👋 Meet the Team</div>
-    <h2 class="sec-title">A Real Office, <em>Real People</em></h2>
-    <p class="sec-sub">We are a local team based right here in Hurghada — come visit us on El Mamsha, or just WhatsApp
-      us anytime. Hundreds of happy European guests have booked with us in person.</p>
-    <div class="office-grid"
-      style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:18px;max-width:1200px;">
-      <div style="border-radius:14px;overflow:hidden;height:320px;border:1px solid var(--border);">
-        <img src="assets/images/img_26.jpg" alt="Express Safari office Hurghada"
-          style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div style="border-radius:14px;overflow:hidden;height:320px;border:1px solid var(--border);">
-        <img src="assets/images/img_27.jpg" alt="Express Safari guests Hurghada"
-          style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-      </div>
-      <div style="border-radius:14px;overflow:hidden;height:320px;border:1px solid var(--border);">
-        <img src="assets/images/img_office_3.jpg" alt="Express Safari team and guests"
-          style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-      </div>
-    </div>
-    <div style="margin-top:20px;display:flex;gap:28px;flex-wrap:wrap;">
-      <div style="display:flex;align-items:center;gap:9px;font-size:0.82rem;color:var(--text2);">
-        <span style="font-size:1.2rem;">📍</span>
-        <span>El Mamsha, Hurghada 1 — <a href="https://maps.app.goo.gl/JPR1qwcbUWvwiHmz9" target="_blank"
-            style="color:var(--blue);text-decoration:none;font-weight:500;">Find us on Google Maps</a></span>
-      </div>
-      <div style="display:flex;align-items:center;gap:9px;font-size:0.82rem;color:var(--text2);">
-        <span style="font-size:1.2rem;">💬</span>
-        <span>Or book instantly via <a href="https://wa.me/201556477716" target="_blank"
-            style="color:var(--blue);text-decoration:none;font-weight:500;">WhatsApp</a> — we reply in minutes</span>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══ REVIEWS ═══ -->
-  <section class="section fade-in grey">
-    <div class="sec-label">Guest Reviews</div>
-    <h2 class="sec-title">What Our <em>Guests Say</em></h2>
-    <p class="sec-sub" style="margin-bottom:30px;">Real feedback from real travelers.</p>
-    <div class="reviews">
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Swimming with wild dolphins in the open sea — the most magical moment of our whole trip.
-          The guide was so helpful and everything was perfectly organised!"</p>
-        <div class="review-author">
-          <div class="flag">🇬🇧</div>
-          <div>
-            <div class="author-name">James T.</div>
-            <div class="author-trip">United Kingdom · Dolphin House</div>
-          </div>
-        </div>
-      </div>
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Orange Bay was absolutely paradise. The swing in the sea, crystal water, food on the
-          boat — I keep telling everyone about it. Perfect day!"</p>
-        <div class="review-author">
-          <div class="flag">🇩🇪</div>
-          <div>
-            <div class="author-name">Anna K.</div>
-            <div class="author-trip">Germany · Orange Bay Island</div>
-          </div>
-        </div>
-      </div>
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"The Luxor day trip completely blew my mind. Valley of the Kings, Karnak Temple — I had
-          no idea Egypt was this extraordinary. Booking via WhatsApp was so easy!"</p>
-        <div class="review-author">
-          <div class="flag">🇳🇱</div>
-          <div>
-            <div class="author-name">Emma V.</div>
-            <div class="author-trip">Netherlands · Luxor Day Trip</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="cta-banner">
-    <h2>Ready to Book Your Trip?</h2>
-    <p>WhatsApp us now — we reply within minutes. Hotel pickup included on every single tour.</p>
-    <div class="cta-row">
-      <a href="https://wa.me/201556477716" target="_blank" class="btn-wa-cta">💬 WhatsApp: +20 155 647 7716</a>
-      <a href="tel:+201556477716" class="btn-outline-w">📞 +20 155 647 7716</a>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-top">
-      <div>
-        <div class="footer-logo"><img src="assets/images/img_1.jpg" alt="Express Safari"></div>
-        <p class="footer-about">Local tour experts in Hurghada, creating unforgettable Red Sea, desert & Egypt
-          experiences for European & American travelers. All trips include hotel transfer. All trips can be made
-          private.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Sea Trips</h5>
-        <ul>
-          <li><a href="#sea">Dolphin House</a></li>
-          <li><a href="#sea">Scuba Diving</a></li>
-          <li><a href="#sea">Sharm El Naga</a></li>
-          <li><a href="#sea">Seascope / Glass Boat</a></li>
-          <li><a href="#sea">Horse Riding</a></li>
-          <li><a href="#sea">Dolphin Show</a></li>
-          <li><a href="#sea">Fishing</a></li>
+        <ul class="row row-cols-2 row-cols-sm-4 g-3 list-unstyled">
+          <li class="col-6 col-sm-3">
+            <div class="trust-pill d-flex align-items-center gap-2"><i class="bi bi-compass text-sun fs-5"></i>Real
+              Guest Experiences</div>
+          </li>
+          <li class="col-6 col-sm-3">
+            <div class="trust-pill d-flex align-items-center gap-2"><i class="bi bi-truck text-sun fs-5"></i>Hotel
+              Pickup</div>
+          </li>
+          <li class="col-6 col-sm-3">
+            <div class="trust-pill d-flex align-items-center gap-2"><i class="bi bi-whatsapp text-sun fs-5"></i>Easy
+              WhatsApp Booking</div>
+          </li>
+          <li class="col-6 col-sm-3">
+            <div class="trust-pill d-flex align-items-center gap-2"><i class="bi bi-geo-alt text-sun fs-5"></i>Local
+              Hurghada Office</div>
+          </li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h5>More Tours</h5>
-        <ul>
-          <li><a href="#desert">Quad Safari</a></li>
-          <li><a href="#desert">Super Safari</a></li>
-          <li><a href="#desert">Jeep Safari</a></li>
-          <li><a href="#islands">Orange Bay Island</a></li>
-          <li><a href="#islands">Utopia Island</a></li>
-          <li><a href="#history">Luxor Day Trip</a></li>
-          <li><a href="#history">Cairo & Pyramids</a></li>
-          <li><a href="#nile">Nile Cruise</a></li>
-        </ul>
+
+    </section>
+    <div class="container-xl">
+      <div class="d-flex flex-wrap gap-2 mb-2">
+        <nav aria-label="Other categories" class="d-flex flex-wrap gap-2 mt-5">
+          <a href="tours/safari.html" class="btn btn-filter rounded-pill">Adventure & Safari</a>
+          <a href="tours/sea.html" class="btn btn-filter rounded-pill">Sea, Sun & Islands</a>
+          <a href="tours/sightseeing.html" class="btn btn-filter rounded-pill">Sightseeing</a>
+          <a href="tours/entertainment.html" class="btn btn-filter rounded-pill">Other Entertainment</a>
+          <a href="tours/private.html" class="btn btn-filter rounded-pill">Private Trips</a>
+        </nav>
+      </div>
+      <!-- FEATURED EXPERIENCES -->
+
+          <p class="eyebrow mb-2">Start here</p>
+          <h2 id="featured" class="display-font text-navy text-uppercase fs-2 fs-sm-1">Featured Experiences</h2>
+          <p class="text-muted-custom mb-4" style="max-width:42rem;">A hand-picked introduction to our sea, desert and
+            sightseeing experiences.</p>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" data-tour-grid>
+            <div class="col" data-tour-card data-price="31" data-duration="Full day">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/orange-bay.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/sea&islands/b1.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/orange-bay.html">Orange Bay</a></h3>
+            <p class="fw-bold text-navy mb-1">A full day at sea, with the island and lunch taken care of.</p>
+            <p class="small text-muted-custom mb-2">Cruise out on our boat for two snorkeling stops at coral reefs, then relax with lunch and soft drinks on board.</p>
+            <p class="card-time">Daily, 8:00 am – 5:00 pm · Hotel transfer included</p>
+            <ul class="inc-list">
+              <li>Two Snorkeling Stops — explore coral reefs on two separate stops, equipment included</li>
+              <li>Island entry included</li>
+              <li>Lunch and soft drinks served on board</li>
+            </ul>
+          </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>Full day</span>
+                    <span class="display-font fw-bold text-clay fs-5">31 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Orange%20Bay."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="28" data-duration="Full day">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/dolphin-house.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/sea&islands/img_3.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/dolphin-house.html">Dolphin House</a></h3>
+            <p class="fw-bold text-navy mb-1">A day at sea built around the dolphins.</p>
+            <p class="small text-muted-custom mb-2">Spend a day on our boat with two snorkeling stops and the chance to swim with dolphins in their natural habitat.</p>
+            <p class="card-time">Daily, 8:30 am – 5:00 pm · Hotel transfer included</p>
+            <ul class="inc-list">
+              <li>Two Snorkeling Stops, equipment included</li>
+              <li>Swimming with dolphins in their natural habitat</li>
+              <li>Lunch and soft drinks included</li>
+            </ul>
+          </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>Full day</span>
+                    <span class="display-font fw-bold text-clay fs-5">28 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Dolphin%20House."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="85" data-duration="Full day">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/abu-dabbab-turtles-beach.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/sea&islands/img_4.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/abu-dabbab-turtles-beach.html">Abu Dabbab (Turtles
+                        Beach)</a></h3>
+            <p class="fw-bold text-navy mb-1">An early start for a long day at Turtles Beach.</p>
+            <p class="small text-muted-custom mb-2">Head out at dawn for a boat trip and snorkeling at Abu Dabbab, with lunch and soft drinks included.</p>
+            <p class="card-time">Daily · 5:00 am pickup, back at 8:00 pm</p>
+            <ul class="inc-list">
+              <li>Boat trip and snorkeling at Abu Dabbab – Turtles Beach</li>
+              <li>Snorkeling equipment included</li>
+              <li>Lunch and soft drinks included</li>
+            </ul>
+          </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>Full day</span>
+                    <span class="display-font fw-bold text-clay fs-5">85 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Abu%20Dabbab%20%28Turtles%20Beach%29."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="23" data-duration="3 hours">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/quad-safari-3h.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/safari/img_14.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/quad-safari-3h.html">Quad Safari &quot;3h&quot;</a></h3>
+            <p class="fw-bold text-navy mb-1">Your own quad, the open desert, and a Bedouin village at the end of the track.</p>
+            <p class="small text-muted-custom mb-2">A short quad adventure, 25 km through the desert to a Bedouin village and 25 km back, on a quad of your own.</p>
+            <p class="card-time">3 hours, daily · 8:30 am or 1:30 pm · Hotel transfer included</p>
+            <ul class="inc-list">
+              <li>Everybody has their own quad</li>
+              <li>25 km through the desert to a Bedouin village</li>
+              <li>Camel ride and tea available</li>
+            </ul>
+          </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>3 hours</span>
+                    <span class="display-font fw-bold text-clay fs-5">23 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Quad%20Safari%20%223h%22."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="65" data-duration="Full day" data-cairo-card>
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/cairo-big-bus.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/cairo&luxor/img_22.jpg" alt="The pyramids of Giza" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/cairo-big-bus.html">Cairo Day Trip</a></h3>
+          <p class="card-time">Selected days · 1:30am - 11:00pm · Full day</p>
+          <ul class="inc-list">
+            <li>Visit the Giza Pyramids and Great Sphinx</li>
+            <li>Explore the Egyptian Museum in Tahrir Square</li>
+            <li>Licensed Egyptologist guide and lunch</li>
+            <li>Choose an air-conditioned coach or minivan</li>
+          </ul>
+                  </div>
+                  <label class="small fw-semibold text-navy" for="featured-cairo-option">Choose your transport</label>
+                  <select class="form-select" id="featured-cairo-option" data-cairo-option>
+                    <option value="Big Bus" data-price="65">Big Bus — 65 €</option>
+                    <option value="Mini Van" data-price="78">Mini Van — 78 €</option>
+                  </select>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>Full day</span>
+                    <span class="display-font fw-bold text-clay fs-5" data-cairo-price>65 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Cairo%20Big%20Bus."
+                    target="_blank" rel="noopener noreferrer" data-cairo-book
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="65" data-duration="Full day" data-luxor-card>
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/luxor-queen-big-bus.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/cairo&luxor/img_21.jpg" alt="Ancient Egyptian temple columns in Luxor" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/luxor-queen-big-bus.html">Luxor Day Trip Queens</a></h3>
+            <p class="fw-bold text-navy mb-1">Step into the story of ancient Thebes in a single long day.</p>
+            <p class="small text-muted-custom mb-2">Visit Karnak, the Colossi of Memnon, Hatshepsut's temple and the Valley of the Queens, with a guide and lunch.</p>
+            <p class="card-time">Sun, Tue, Thu · 4:30 am – 11:30 pm · By bus</p>
+            <ul class="inc-list">
+              <li>Karnak Temple and the Colossi of Memnon</li>
+              <li>Temple of Hatshepsut and Valley of the Queens</li>
+              <li>Entries, guide in your language and lunch included</li>
+            </ul>
+          </div>
+                  <label class="small fw-semibold text-navy" for="featured-luxor-option">Choose your transport</label>
+                  <select class="form-select" id="featured-luxor-option" data-luxor-option>
+                    <option value="Big Bus" data-price="65">Big Bus — 65 €</option>
+                    <option value="Mini Van" data-price="78">Mini Van — 78 €</option>
+                  </select>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>Full day</span>
+                    <span class="display-font fw-bold text-clay fs-5" data-luxor-price>65 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Luxor%20Queen%20Big%20Bus."
+                    target="_blank" rel="noopener noreferrer" data-luxor-book
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY EXPRESS SAFARI -->
+      <section class="bg-papyrus section-py" aria-labelledby="why">
+        <div class="container-xl">
+          <h2 id="why" class="display-font text-navy text-uppercase fs-2 fs-sm-1">Why Express Safari?</h2>
+          <p class="display-font text-clay text-uppercase fs-5 mb-4">Local team. Real office. Real experiences.</p>
+          <div class="row g-3">
+            <div class="col-sm-6 col-lg-3">
+              <div class="bg-white rounded-4xl shadow-sm p-4 h-100">
+                <span class="icon-badge"><i class="bi bi-truck fs-5"></i></span>
+                <h3 class="h5 text-navy mt-3 mb-1">Hotel Pickup</h3>
+                <p class="small text-muted-custom mb-0">We collect you from your hotel in Hurghada and bring you back
+                  after the trip.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="bg-white rounded-4xl shadow-sm p-4 h-100">
+                <span class="icon-badge"><i class="bi bi-whatsapp fs-5"></i></span>
+                <h3 class="h5 text-navy mt-3 mb-1">Easy WhatsApp Booking</h3>
+                <p class="small text-muted-custom mb-0">No accounts, no forms. Send one message and we confirm your
+                  trip.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="bg-white rounded-4xl shadow-sm p-4 h-100">
+                <span class="icon-badge"><i class="bi bi-people fs-5"></i></span>
+                <h3 class="h5 text-navy mt-3 mb-1">Local Hurghada Team</h3>
+                <p class="small text-muted-custom mb-0">A real office on El Mamsha with a team you can meet in person.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="bg-white rounded-4xl shadow-sm p-4 h-100">
+                <span class="icon-badge"><i class="bi bi-compass fs-5"></i></span>
+                <h3 class="h5 text-navy mt-3 mb-1">Private Trips</h3>
+                <p class="small text-muted-custom mb-0">Every trip can be arranged privately, planned around what you
+                  want
+                  to see.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-sand section-py" aria-labelledby="cat-sea">
+        <div class="container-xl">
+          <p class="eyebrow mb-2">Red Sea days</p>
+          <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+            <div style="max-width:42rem;">
+              <h2 id="cat-sea" class="display-font text-navy text-uppercase fs-2 fs-sm-1 mb-2">Sea, Sun & Islands</h2>
+              <p class="text-muted-custom mb-0">Red Sea boat trips, island days, parasailing and snorkeling stops around
+                Hurghada, with hotel pick up and drop off included.</p>
+            </div>
+            <a href="tours/sea.html"
+              class="btn btn-outline-navy rounded-pill btn-uppercase px-4 py-2 d-inline-flex align-items-center gap-2">
+              View all sea & island tours <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" data-tour-grid>
+            <div class="col" data-tour-card data-price="28" data-duration="Full day">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/hula-hula-island.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/sea&islands/59.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/hula-hula-island.html">Hula Hula Island</a></h3>
+          <p class="card-time">Daily · 8:30am - 4:30pm · Giftun Island</p>
+          <ul class="inc-list">
+           <li>Lively Hula Hula beach on Giftun Island</li>
+            <li>2 guided reef snorkeling stops (gear included)</li>
+            <li>Buffet lunch & soft drinks on board</li>
+            <li>Hotel pickup and drop-off included</li>
+            
+          </ul>
+        
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>Full day</span>
+                    <span class="display-font fw-bold text-clay fs-5">28 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Hula%20Hula%20Island."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="31" data-duration="Full day">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/orange-bay.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/sea&islands/b1.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/orange-bay.html">Orange Bay</a></h3>
+            <p class="fw-bold text-navy mb-1">A full day at sea, with the island and lunch taken care of.</p>
+            <p class="small text-muted-custom mb-2">Cruise out on our boat for two snorkeling stops at coral reefs, then relax with lunch and soft drinks on board.</p>
+            <p class="card-time">Daily, 8:00 am – 5:00 pm · Hotel transfer included</p>
+            <ul class="inc-list">
+              <li>Two Snorkeling Stops — explore coral reefs on two separate stops, equipment included</li>
+              <li>Island entry included</li>
+              <li>Lunch and soft drinks served on board</li>
+            </ul>
+          </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>Full day</span>
+                    <span class="display-font fw-bold text-clay fs-5">31 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Orange%20Bay."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="35" data-duration="Full day">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/orange-bay-lunch-on-island.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/sea&islands/b1.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/orange-bay-lunch-on-island.html">Orange Bay, Lunch on
+                        Island</a></h3>
+          <p class="card-time">Daily · 8:00am - 5:00pm</p>
+          <ul class="inc-list">
+            <li>Full day cruise to Orange Bay (Giftun Island)</li>
+            <li>Fresh hot lunch served directly on the island</li>
+            <li>2 snorkeling stops with equipment included</li>
+            <li>Island entrance fee & hotel transfer included</li>
+          </ul>
+        
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>Full day</span>
+                    <span class="display-font fw-bold text-clay fs-5">35 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Orange%20Bay%2C%20Lunch%20on%20Island."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="45" data-duration="Full day">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/paradise-island.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/sea&islands/1000022461.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/paradise-island.html">Paradise Island</a></h3>
+            <p class="fw-bold text-navy mb-1">Your own day on Paradise Island, starting with the boat.</p>
+            <p class="small text-muted-custom mb-2">Sail out for two snorkeling stops at coral reefs, then enjoy Paradise Island with entry, lunch and soft drinks all covered on boat.</p>
+            <p class="card-time">Daily, 8:00 am – 5:00 pm · Hotel transfer included</p>
+            <ul class="inc-list">
+              <li>Two Snorkeling Stops — coral reef snorkeling, equipment included</li>
+              <li>Paradise Island entry included</li>
+              <li>Lunch and soft drinks on boat</li>
+            </ul>
+          </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>Full day</span>
+                    <span class="display-font fw-bold text-clay fs-5">45 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Paradise%20Island."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="18" data-duration="3 hours">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/seascope-paradise-glass-boat.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/sea&islands/img_7.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/seascope-paradise-glass-boat.html">Seascope</a></h3>
+            <p class="fw-bold text-navy mb-1">See the reef without getting wet, then jump in if you like.</p>
+            <p class="small text-muted-custom mb-2">A short boat trip with a glass window onto the underwater world, plus a snorkeling stop with equipment included.</p>
+            <p class="card-time">3 hours, daily · 10:00 am or 2:00 pm · Hotel transfer included</p>
+            <ul class="inc-list">
+              <li>Watch the underwater world through the boat's window</li>
+              <li>Snorkeling stop with equipment included</li>
+              <li>Soft drinks included</li>
+            </ul>
+          </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>3 hours</span>
+                    <span class="display-font fw-bold text-clay fs-5">18 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Seascope%2C%20Paradise%20Glass%20Boat."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="28" data-duration="Full day">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/dolphin-house.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/sea&islands/img_3.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/dolphin-house.html">Dolphin House</a></h3>
+            <p class="fw-bold text-navy mb-1">A day at sea built around the dolphins.</p>
+            <p class="small text-muted-custom mb-2">Spend a day on our boat with two snorkeling stops and the chance to swim with dolphins in their natural habitat.</p>
+            <p class="card-time">Daily, 8:30 am – 5:00 pm · Hotel transfer included</p>
+            <ul class="inc-list">
+              <li>Two Snorkeling Stops, equipment included</li>
+              <li>Swimming with dolphins in their natural habitat</li>
+              <li>Lunch and soft drinks included</li>
+            </ul>
+          </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>Full day</span>
+                    <span class="display-font fw-bold text-clay fs-5">28 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Dolphin%20House."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="38" data-duration="15 minutes">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/parasailing-15m.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/sea&islands/Parasail.png" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/parasailing-15m.html">Parasailing &quot;15m&quot;</a></h3>
+                    <p class="card-time">Daily · 9:00am - 4:00pm · 15 min flight</p>
+                    <ul class="inc-list">
+                      <li>10–15 min parasailing flight above Red Sea</li>
+                      <li>Single or tandem double flight options</li>
+                      <li>Professional speed boat crew &amp; safety harness</li>
+                      <li>Hotel transfer to parasailing dock included</li>
+                    </ul>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>15 minutes</span>
+                    <span class="display-font fw-bold text-clay fs-5">38 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Parasailing%20%2215m%22."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-white section-py" aria-labelledby="cat-safari">
+        <div class="container-xl">
+          <p class="eyebrow mb-2">Desert days</p>
+          <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+            <div style="max-width:42rem;">
+              <h2 id="cat-safari" class="display-font text-navy text-uppercase fs-2 fs-sm-1 mb-2">Adventure & Safari
+              </h2>
+              <p class="text-muted-custom mb-0">Quad and family safaris in the Eastern Desert, camel and horse riding,
+                diving and the aquapark.</p>
+            </div>
+            <a href="tours/safari.html"
+              class="btn btn-outline-navy rounded-pill btn-uppercase px-4 py-2 d-inline-flex align-items-center gap-2">
+              View all safari tours <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" data-tour-grid>
+            <div class="col" data-tour-card data-price="23" data-duration="3 hours">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/quad-safari-3h.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/safari/img_14.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/quad-safari-3h.html">Quad Safari &quot;3h&quot;</a></h3>
+            <p class="fw-bold text-navy mb-1">Your own quad, the open desert, and a Bedouin village at the end of the track.</p>
+            <p class="small text-muted-custom mb-2">A short quad adventure, 25 km through the desert to a Bedouin village and 25 km back, on a quad of your own.</p>
+            <p class="card-time">3 hours, daily · 8:30 am or 1:30 pm · Hotel transfer included</p>
+            <ul class="inc-list">
+              <li>Everybody has their own quad</li>
+              <li>25 km through the desert to a Bedouin village</li>
+              <li>Camel ride and tea available</li>
+            </ul>
+          </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>3 hours</span>
+                    <span class="display-font fw-bold text-clay fs-5">23 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Quad%20Safari%20%223h%22."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="28" data-duration="5 hours">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/quad-safari-5h.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/safari/safari5h.jpeg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/quad-safari-5h.html">Quad Safari (5 Hours)</a></h3>
+            <p class="fw-bold text-navy mb-1">Ride out by quad, watch the sunset, stay for the stars.</p>
+            <p class="small text-muted-custom mb-2">Your own quad across 25 km of desert to a Bedouin village, then sunset, dinner, a dancing show and stargazing.</p>
+            <p class="card-time">1:30 pm – 8:00 pm, daily · Dinner and soft drinks included</p>
+            <ul class="inc-list">
+              <li>Own quad, 25 km each way</li>
+              <li>Sunset, dinner and dancing show</li>
+              <li>Stars through a telescope</li>
+            </ul>
+          </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>5 hours</span>
+                    <span class="display-font fw-bold text-clay fs-5">28 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Quad%20Safari%20%225h%22."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="23" data-duration="3 hours">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/family-safari-3h.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/safari/super safari.png" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/family-safari-3h.html">Family Safari &quot;3h&quot;</a></h3>
+                    <p class="card-time">Daily · 8:30am or 1:30pm · 3 hours</p>
+                    <ul class="inc-list">
+                      <li>Family-friendly desert quad trail to Bedouin village</li>
+                      <li>Individual vehicle for participants</li>
+                      <li>Camel ride, traditional tea &amp; Shisha</li>
+                      <li>Hotel pickup and drop-off included</li>
+                    </ul>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>3 hours</span>
+                    <span class="display-font fw-bold text-clay fs-5">23 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Family%20Safari%20%223h%22."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="28" data-duration="5 hours">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/family-safari-5h.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/safari/party.png" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/family-safari-5h.html">Family Safari (5 Hours)</a></h3>
+                    <p class="card-time">Daily · 1:30pm - 8:00pm · 5 hours</p>
+                    <ul class="inc-list">
+                      <li>25 km quad ride to Bedouin village &amp; return</li>
+                      <li>Camel ride, sunset &amp; telescope stargazing</li>
+                      <li>Dinner and oriental folklore dancing show</li>
+                      <li>Soft drinks &amp; round-trip hotel transfer</li>
+                    </ul>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>5 hours</span>
+                    <span class="display-font fw-bold text-clay fs-5">28 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Family%20Safari%20%225h%22."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="38" data-duration="6.5 hours">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/sahara-park.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/safari/famaly1 (2).jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/sahara-park.html">Jeep Safari</a></h3>
+            <p class="fw-bold text-navy mb-1">Quad, buggy and jeep in a single desert evening.</p>
+            <p class="small text-muted-custom mb-2">Drive a quad, then a buggy, then take a jeep to the Bedouin village for sunset, dinner, a show and stargazing.</p>
+            <p class="card-time">6.5 hours, 1:30 pm – 8:00 pm · Dinner and soft drinks included</p>
+            <ul class="inc-list">
+              <li>Own quad (45 minutes of driving) and a 25-minute buggy drive</li>
+              <li>Jeep ride to the Bedouin village</li>
+              <li>Sunset, dinner, dancing show and stargazing</li>
+            </ul>
+          </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i class="bi bi-clock me-1"></i>6.5 hours</span>
+                    <span class="display-font fw-bold text-clay fs-5">38 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Sahara%20Park."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-papyrus section-py" aria-labelledby="cat-sightseeing">
+        <div class="container-xl">
+          <p class="eyebrow mb-2">Ancient Egypt</p>
+          <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+            <div style="max-width:42rem;">
+              <h2 id="cat-sightseeing" class="display-font text-navy text-uppercase fs-2 fs-sm-1 mb-2">Sightseeing</h2>
+              <p class="text-muted-custom mb-0">Day trips from Hurghada to Cairo, Luxor, El Gouna and Alexandria, plus
+                the
+                Nile Cruise.</p>
+            </div>
+            <a href="tours/sightseeing.html"
+              class="btn btn-outline-navy rounded-pill btn-uppercase px-4 py-2 d-inline-flex align-items-center gap-2">
+              View all sightseeing <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" data-tour-grid>
+            <div class="col" data-tour-card data-price="65" data-duration="Full day" data-cairo-card>
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/cairo-big-bus.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/cairo&luxor/img_22.jpg" alt="The pyramids of Giza" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/cairo-big-bus.html">Cairo Day Trip</a></h3>
+          <p class="card-time">Selected days · 1:30am - 11:00pm · Full day</p>
+          <ul class="inc-list">
+            <li>Visit the Giza Pyramids and Great Sphinx</li>
+            <li>Explore the Egyptian Museum in Tahrir Square</li>
+            <li>Licensed Egyptologist guide and lunch</li>
+            <li>Choose an air-conditioned coach or minivan</li>
+          </ul>
+                  </div>
+                  <label class="small fw-semibold text-navy" for="sightseeing-cairo-option">Choose your
+                    transport</label>
+                  <select class="form-select" id="sightseeing-cairo-option" data-cairo-option>
+                    <option value="Big Bus" data-price="65">Big Bus — 65 €</option>
+                    <option value="Mini Van" data-price="78">Mini Van — 78 €</option>
+                  </select>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>Full day</span>
+                    <span class="display-font fw-bold text-clay fs-5" data-cairo-price>65 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Cairo%20Big%20Bus."
+                    target="_blank" rel="noopener noreferrer" data-cairo-book
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="" data-duration="">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/cairo-new-museum.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/cairo&luxor/new mus (7).jpg" alt="Visitors at the Grand Egyptian Museum" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/cairo-new-museum.html">Cairo Museum Upgrade</a></h3>
+          <p class="card-time">Museum add-on · +25 € · Cairo day trip</p>
+          <ul class="inc-list">
+            <li>Choose the Grand Egyptian Museum or NMEC</li>
+            <li>See the GEM Grand Hall or NMEC Royal Mummies display</li>
+            <li>Guided museum visit</li>
+            <li>Add-on for your Cairo day trip; ask about availability</li>
+          </ul>
+        
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span></span>
+                    <span class="display-font fw-bold text-clay fs-5">+ 25 € supplement</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Cairo%20New%20Museum."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="70" data-duration="Full day" data-luxor-card>
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/luxor-king-valley.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/cairo&luxor/king.webp" alt="Painted walls inside a tomb in the Valley of the Kings" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/luxor-king-valley.html">Luxor King Valley</a></h3>
+                    <p class="fw-bold text-navy mb-1">Step into the story of ancient Thebes in a single long day.</p>
+                    <p class="small text-muted-custom mb-2">Visit Karnak, the Colossi of Memnon, Hatshepsut's temple and the Valley of the Kings , with a guide and lunch.</p>
+                    <p class="card-time">Sun, Tue, Thu · 4:30 am – 10:30 pm · By bus</p>
+                    <ul class="inc-list">
+                      <li>Karnak Temple and the Colossi of Memnon</li>
+                      <li>Temple of Hatshepsut and Valley of the Kings</li>
+                      <li>Entries, guide in your language and lunch included</li>
+                    </ul>
+                  </div>
+                  <label class="small fw-semibold text-navy" for="sightseeing-luxor-option">Choose your
+                    transport</label>
+                  <select class="form-select" id="sightseeing-luxor-option" data-luxor-option>
+                    <option value="Big Bus" data-price="70">Big Bus — 70 €</option>
+                    <option value="Mini Van" data-price="83">Mini Van — 83 €</option>
+                  </select>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>Full day</span>
+                    <span class="display-font fw-bold text-clay fs-5" data-luxor-price>70 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Luxor%20King%20Valley."
+                    target="_blank" rel="noopener noreferrer" data-luxor-book
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-sand section-py" aria-labelledby="cat-entertainment">
+        <div class="container-xl">
+          <p class="eyebrow mb-2">In town</p>
+          <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+            <div style="max-width:42rem;">
+              <h2 id="cat-entertainment" class="display-font text-navy text-uppercase fs-2 fs-sm-1 mb-2">Other
+                Entertainment</h2>
+              <p class="text-muted-custom mb-0">Aquarium, Mini Egypt and dolphin show in Hurghada.</p>
+            </div>
+            <a href="tours/entertainment.html"
+              class="btn btn-outline-navy rounded-pill btn-uppercase px-4 py-2 d-inline-flex align-items-center gap-2">
+              View all entertainment <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" data-tour-grid>
+            <div class="col" data-tour-card data-price="41" data-duration="">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/aquarium.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/others/aquariom (1).png" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/aquarium.html">Aquarium</a></h3>
+          <p class="card-time">Daily · Flexible departures · Approx. 3 hours</p>
+          <ul class="inc-list">
+            <li>Hurghada Grand Aquarium entry tickets</li>
+            <li>Walk-through underwater shark and ray tunnel</li>
+            <li>Mini zoo, rainforest & prehistoric fossil exhibit</li>
+            <li>Round-trip hotel transfers included</li>
+          </ul>
+        
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span></span>
+                    <span class="display-font fw-bold text-clay fs-5">41 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Aquarium."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="28" data-duration="">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/mini-egypt.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/others/mini.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/mini-egypt.html">Mini Egypt</a></h3>
+          <p class="card-time">Daily · Morning or afternoon · Approx. 3 hours</p>
+          <ul class="inc-list">
+            <li>Entry ticket to Mini Egypt Park in Makadi Bay</li>
+            <li>Walk among 1:25 scale replicas of Egypt's wonders</li>
+            <li>Pyramids, Luxor, Abu Simbel & Alexandria monuments</li>
+            <li>Round-trip hotel transfers included</li>
+          </ul>
+        
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span></span>
+                    <span class="display-font fw-bold text-clay fs-5">28 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Mini%20Egypt."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-tour-card data-price="17" data-duration="1 hour">
+              <div class="tour-card h-100 d-flex flex-column">
+                <a href="tour/dolphin-show.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/others/an3_63c1a_lg.jpg" alt="" loading="lazy">
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1 gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1"><a href="tour/dolphin-show.html">Dolphin Show</a></h3>
+            <p class="fw-bold text-navy mb-1">An hour with dolphins and walrus, in the front row.</p>
+            <p class="small text-muted-custom mb-2">Enjoy a one-hour show with dolphins and walrus, with optional dolphin swimming and photos available.</p>
+            <p class="card-time">1 hour · 9:00 am or 1:30 pm pickup · Hotel transfer included</p>
+            <ul class="inc-list">
+              <li>One-hour show with dolphins and walrus</li>
+              <li>Extra: swimming in the pool with dolphins</li>
+              <li>Extra: pictures with dolphins</li>
+            </ul>
+          </div>
+                  <div class="d-flex align-items-center justify-content-between mt-auto">
+                    <span class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                        class="bi bi-clock me-1"></i>1 hour</span>
+                    <span class="display-font fw-bold text-clay fs-5">17 €</span>
+                  </div>
+                  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20book%20Dolphin%20Show."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn btn-whatsapp btn-uppercase rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIVATE TRIPS -->
+      <section class="bg-navy text-sand section-py" aria-labelledby="private">
+        <div class="container-xl">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <p class="eyebrow text-sun mb-2">Just for you</p>
+              <h2 id="private" class="display-font text-uppercase fs-2 fs-sm-1 mb-3">Private Trips</h2>
+              <p class="mb-4" style="color:rgba(251,242,230,0.85);">Secret Village Mountain Spring Safari, Luxor Hot
+                Balloon, Abu Simbel, Speedboat, Glassboat, Fishing, Private Cars and City Tour. Tell us what you would
+                like to do and we plan it with you.</p>
+              <div class="d-flex flex-column flex-sm-row gap-3">
+                <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20ask%20about%20a%20private%20trip."
+                  target="_blank" rel="noopener noreferrer"
+                  class="btn btn-whatsapp btn-uppercase rounded-pill px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2">
+                  <i class="bi bi-whatsapp"></i> Ask about a private trip
+                </a>
+                <a href="tours/private.html" class="btn btn-outline-sand btn-uppercase rounded-pill px-4 py-3">See
+                  private
+                  trips</a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="assets/Secret Villiage/scr.jpeg" alt="Desert mountain track near Hurghada at sunset"
+                loading="lazy" class="w-100 rounded-4xl shadow aspect-4-3">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCAL TEAM -->
+      <section class="bg-white section-py" aria-labelledby="team">
+        <div class="container-xl">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+              <div class="row g-3">
+                <div class="col-6">
+                  <img src="assets/images/img_26.jpg"
+                    alt="Express Safari excursions office on El Mamsha in Hurghada with the team outside" loading="lazy"
+                    class="w-100 rounded-4xl shadow aspect-4-5">
+                </div>
+                <div class="col-6">
+                  <img src="assets/images/img_office_3.jpg"
+                    alt="Express Safari guests and local team outside the Hurghada office" loading="lazy"
+                    class="w-100 rounded-4xl shadow aspect-4-5">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <h2 id="team" class="display-font text-navy text-uppercase fs-2 fs-sm-1 mb-3">Meet your local team</h2>
+              <p class="text-muted-custom mb-4" style="max-width:36rem;">We're not just an online booking website. We're
+                a
+                real local travel team in Hurghada, ready to help you choose the right experience.</p>
+              <ul class="list-unstyled d-flex flex-wrap gap-2 mb-4">
+                <li class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                    class="bi bi-geo-alt text-clay me-1"></i>Real office</li>
+                <li class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                    class="bi bi-people text-clay me-1"></i>Local team</li>
+                <li class="badge rounded-pill bg-sand-deep text-brown fw-semibold px-3 py-2"><i
+                    class="bi bi-whatsapp text-clay me-1"></i>WhatsApp support</li>
+              </ul>
+              <div class="d-flex flex-column flex-sm-row gap-3">
+                <a href="about.html" class="btn btn-clay btn-uppercase rounded-pill px-4 py-3">Visit our office</a>
+                <a href="https://maps.app.goo.gl/JPR1qwcbUWvwiHmz9" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline-navy btn-uppercase rounded-pill px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2">
+                  <i class="bi bi-geo-alt"></i> Open Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GUESTS -->
+      <section class="bg-papyrus section-py" aria-labelledby="guests">
+        <div class="container text-center" style="max-width:44rem;">
+          <h2 id="guests" class="display-font text-navy text-uppercase fs-2 fs-sm-1 mb-3">What our guests say</h2>
+          <p class="text-muted-custom mb-4">We only show real guest feedback. You can see photos and messages from
+            recent
+            trips on our own social pages.</p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="https://www.instagram.com/express.safari/" target="_blank" rel="noopener noreferrer"
+              class="btn bg-white text-navy rounded-pill fw-bold px-4 py-3 shadow-sm d-inline-flex align-items-center gap-2"><i
+                class="bi bi-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61580772353044" target="_blank" rel="noopener noreferrer"
+              class="btn bg-white text-navy rounded-pill fw-bold px-4 py-3 shadow-sm d-inline-flex align-items-center gap-2"><i
+                class="bi bi-facebook"></i> Facebook</a>
+            <a href="https://www.tiktok.com/@express.safari" target="_blank" rel="noopener noreferrer"
+              class="btn bg-white text-navy rounded-pill fw-bold px-4 py-3 shadow-sm d-inline-flex align-items-center gap-2"><i
+                class="bi bi-tiktok"></i> TikTok</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="bg-clay text-white py-5" style="padding-top:4rem;padding-bottom:4rem;">
+        <div class="container text-center" style="max-width:40rem;">
+          <h2 class="display-font text-uppercase fs-2 fs-sm-1 mb-3">Ready for your next adventure?</h2>
+          <p class="mb-4" style="color:rgba(255,255,255,0.9);">Tell us what you want to do and our local team will help
+            you choose the right experience.</p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+            <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20ask%20about%20your%20tours."
+              target="_blank" rel="noopener noreferrer"
+              class="btn btn-whatsapp btn-uppercase rounded-pill px-4 py-3 shadow d-inline-flex align-items-center justify-content-center gap-2">
+              <i class="bi bi-whatsapp"></i> Book on WhatsApp
+            </a>
+            <a href="tours/sea.html" class="btn btn-outline-white btn-uppercase rounded-pill px-4 py-3">Explore
+              Tours</a>
+          </div>
+        </div>
+      </section>
+
+  </main>
+  <footer class="site-footer mt-5">
+    <div class="container-xl py-5">
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <p class="display-font fs-4 fw-bold mb-1">Express Safari</p>
+          <p class="small mb-3" style="color:rgba(251,242,230,0.7);">Local Tour Experts in Hurghada</p>
+          <div class="d-flex gap-2">
+            <a class="social-btn" href="https://www.instagram.com/express.safari/" target="_blank"
+              rel="noopener noreferrer" aria-label="Express Safari on Instagram"><i class="bi bi-instagram"></i></a>
+            <a class="social-btn" href="https://www.facebook.com/profile.php?id=61580772353044" target="_blank"
+              rel="noopener noreferrer" aria-label="Express Safari on Facebook"><i class="bi bi-facebook"></i></a>
+            <a class="social-btn" href="https://www.tiktok.com/@express.safari" target="_blank"
+              rel="noopener noreferrer" aria-label="Express Safari on TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <p class="text-uppercase small fw-bold" style="letter-spacing:0.15em;">Tours</p>
+          <ul class="list-unstyled small d-grid gap-2 mt-3">
+            <li><a href="tours/sea.html">Sea, Sun & Islands</a></li>
+            <li><a href="tours/safari.html">Adventure & Safari</a></li>
+            <li><a href="tours/sightseeing.html">Sightseeing</a></li>
+            <li><a href="tours/entertainment.html">Other Entertainment</a></li>
+            <li><a href="tours/private.html">Private Trips</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <p class="text-uppercase small fw-bold" style="letter-spacing:0.15em;">Company</p>
+          <ul class="list-unstyled small d-grid gap-2 mt-3">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <p class="text-uppercase small fw-bold" style="letter-spacing:0.15em;">Find us</p>
+          <ul class="list-unstyled small d-grid gap-2 mt-3">
+            <li class="d-flex gap-2"><i class="bi bi-geo-alt text-sun mt-1"></i><a
+                href="https://maps.app.goo.gl/JPR1qwcbUWvwiHmz9" target="_blank" rel="noopener noreferrer">El Mamsha,
+                Hurghada 1</a></li>
+            <li class="d-flex gap-2"><i class="bi bi-telephone text-sun mt-1"></i><a href="tel:+201556477716">+20 155
+                647 7716</a></li>
+            <li class="d-flex gap-2"><i class="bi bi-whatsapp text-sun mt-1"></i><a
+                href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20ask%20about%20your%20tours."
+                target="_blank" rel="noopener noreferrer">Book on WhatsApp</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 Express Safari · <a href="https://maps.app.goo.gl/JPR1qwcbUWvwiHmz9" target="_blank"
-          style="color:rgba(255,255,255,0.5);text-decoration:none;">📍 El Mamsha, Hurghada, Red Sea Governorate</a> ·
-        +20 155 647 7716 · +20 155 647 7716</p>
-      <div class="socials">
-        <a href="https://www.instagram.com/express.safari/" target="_blank" aria-label="Instagram"><i
-            class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61580772353044" target="_blank" aria-label="Facebook"><i
-            class="fab fa-facebook-f"></i></a>
-        <a href="https://www.tiktok.com/@express.safari" target="_blank" aria-label="TikTok"><i
-            class="fab fa-tiktok"></i></a>
-        <a href="https://maps.app.goo.gl/JPR1qwcbUWvwiHmz9" target="_blank" aria-label="Google Maps"><i
-            class="fas fa-map-marker-alt"></i></a>
-      </div>
+    <div class="border-top text-center small py-3"
+      style="border-color:rgba(251,242,230,0.15) !important; color:rgba(251,242,230,0.6);">
+      &copy; 2026 Express Safari, Hurghada. All rights reserved.
     </div>
   </footer>
+  <a href="https://wa.me/201556477716?text=Hello%20Express%20Safari%2C%20I%20would%20like%20to%20ask%20about%20your%20tours."
+    target="_blank" rel="noopener noreferrer" class="wa-float wa-float-raised"
+    aria-label="Chat with Express Safari on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js?v=2"></script>
 
-  <script src="js/main.js" defer></script>
 </body>
 
 </html>
